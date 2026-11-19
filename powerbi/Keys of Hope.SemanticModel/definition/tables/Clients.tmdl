@@ -1,0 +1,83 @@
+table Clients
+	lineageTag: 2ab3e0a8-dc53-4490-8010-c3f836b9dfb0
+
+	column client_id
+		dataType: string
+		isHidden
+		isKey
+		lineageTag: 01b3846f-7a38-4232-9c55-1aa1134499ae
+		summarizeBy: none
+		sourceColumn: client_id
+
+	column programs
+		dataType: string
+		isHidden
+		lineageTag: 02ece565-e96c-41b6-a7d4-30475b4505d2
+		summarizeBy: none
+		sourceColumn: programs
+
+	column race_1
+		dataType: string
+		lineageTag: e20f5544-9443-4560-b609-c1d904e40e76
+		summarizeBy: none
+		sourceColumn: race_1
+
+	column raceHispanic
+		dataType: string
+		isHidden
+		lineageTag: 7e824f68-2d23-4d94-9dfa-30c78e208670
+		summarizeBy: none
+		sourceColumn: raceHispanic
+
+	column veteran
+		dataType: string
+		lineageTag: 97453038-884e-4e35-8783-cd32fa5d7979
+		summarizeBy: none
+		sourceColumn: veteran
+
+	column disabilities
+		dataType: string
+		lineageTag: 9c36d678-a74f-4dcb-ba37-7c053233b941
+		summarizeBy: none
+		sourceColumn: disabilities
+
+	column countyOfOrigin
+		dataType: string
+		lineageTag: e0f17388-5668-4e7c-9964-5ebb600b2ee0
+		summarizeBy: none
+		sourceColumn: countyOfOrigin
+
+	column educationLevel
+		dataType: string
+		lineageTag: fe2744d8-aa8b-433d-9624-33761039a9a7
+		summarizeBy: none
+		sourceColumn: educationLevel
+
+	column incomeLimits
+		dataType: string
+		lineageTag: 8a1ea43a-f11e-42f8-b779-02f0af7aa9d8
+		summarizeBy: none
+		sourceColumn: incomeLimits
+
+	column eligibleForRecovery
+		dataType: string
+		lineageTag: 54e43750-6e12-4d91-8723-6a3d2f70ec6b
+		summarizeBy: none
+		sourceColumn: eligibleForRecovery
+
+	partition Clients = m
+		mode: import
+		source =
+				let
+				    Raw = Table.Combine(Table.SelectRows(ExportFiles, each [Kind] = "clients")[Data]),
+				    Keep = Table.SelectColumns(Raw, {"Client ID", "programs", "race_1", "raceHispanic", "veteran", "disabilities", "countyOfOrigin", "educationLevel", "incomeLimits", "eligibleForRecovery"}, MissingField.UseNull),
+				    KOH = Table.SelectRows(Keep, each [programs] <> null and Text.Contains(Text.From([programs]), "Keys of Hope", Comparer.OrdinalIgnoreCase)),
+				    Renamed = Table.RenameColumns(KOH, {{"Client ID", "client_id"}}),
+				    AsText = Table.TransformColumns(Renamed, {}, each if _ = null or Text.Trim(Text.From(_)) = "" then "Not recorded" else Text.Trim(Text.From(_))),
+				    OnePerWoman = Table.Distinct(Table.SelectRows(AsText, each [client_id] <> "Not recorded"), {"client_id"}),
+				    Typed = Table.TransformColumnTypes(OnePerWoman, List.Transform(Table.ColumnNames(OnePerWoman), each {_, type text}))
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

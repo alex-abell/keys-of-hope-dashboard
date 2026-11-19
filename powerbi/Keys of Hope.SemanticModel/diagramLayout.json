@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 302.32382710777733,
+            "y": 506.91510862130895
+          },
+          "nodeIndex": "Attendance",
+          "nodeLineageTag": "3de45519-b0cc-4993-81e1-ecd1b41ebe1d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 589.30723667664017,
+            "y": 163.44200091658513
+          },
+          "nodeIndex": "Clients",
+          "nodeLineageTag": "2ab3e0a8-dc53-4490-8010-c3f836b9dfb0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 302.87897776420436
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "9cbef19e-0771-4a43-813c-6aa503fd70fb",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 277.51661107001996,
+            "y": -50
+          },
+          "nodeIndex": "Stays",
+          "nodeLineageTag": "f46ab1ff-8eee-43e2-a08d-5a15d6fbdd82",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

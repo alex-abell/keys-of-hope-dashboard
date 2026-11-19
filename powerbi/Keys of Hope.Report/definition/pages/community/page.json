@@ -1,0 +1,486 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "community",
+  "displayName": "Who we serve",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F7F5F2'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "served",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "served",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "knox",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "recovery",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "income",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "race",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "county",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "education",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "disability",
+      "type": "NoFilter"
+    },
+    {
+      "source": "incomeBand",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "disability",
+      "target": "veteran",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "served",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "knox",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "recovery",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "income",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "race",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "county",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "education",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "incomeBand",
+      "type": "NoFilter"
+    },
+    {
+      "source": "veteran",
+      "target": "disability",
+      "type": "NoFilter"
+    }
+  ]
+}

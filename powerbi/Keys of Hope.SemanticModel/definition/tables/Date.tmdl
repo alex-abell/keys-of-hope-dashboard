@@ -1,0 +1,48 @@
+table Date
+	lineageTag: 9cbef19e-0771-4a43-813c-6aa503fd70fb
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 40622ddc-8d5b-4e60-b2f2-7d58a7c01429
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Month Start'
+		dataType: dateTime
+		formatString: MMM yyyy
+		lineageTag: 8ac0acaf-fe8a-4d37-9504-03b0ffbb9b0f
+		summarizeBy: none
+		sourceColumn: Month Start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Grant Year'
+		dataType: string
+		lineageTag: 7ee2ac8f-e538-4711-81f6-16b2075e2635
+		summarizeBy: none
+		sourceColumn: Grant Year
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				    LastLoadedDate = List.Max(List.Combine({{Date.From(DateTime.LocalNow())}, List.RemoveNulls(Stays[entry_date]), List.RemoveNulls(Stays[exit_date])})),
+				    FirstDate = List.Min(List.Combine({{LastLoadedDate}, List.RemoveNulls(Stays[entry_date])})),
+				    Days = List.Dates(FirstDate, Duration.Days(LastLoadedDate - FirstDate) + 1, #duration(1, 0, 0, 0)),
+				    FromList = Table.FromColumns({Days}, type table [Date = date]),
+				    WithMonth = Table.AddColumn(FromList, "Month Start", each Date.StartOfMonth([Date]), type date),
+				    WithGrantYear = Table.AddColumn(WithMonth, "Grant Year", each
+				        let
+				            yr = Date.Year([Date]) - (if Date.Month([Date]) < 7 then 1 else 0)
+				        in
+				            Text.From(yr) & "-" & Text.End(Text.From(yr + 1), 2), type text)
+				in
+				    WithGrantYear
+
+	annotation PBI_ResultType = Table
+

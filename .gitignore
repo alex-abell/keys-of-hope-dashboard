@@ -31,3 +31,6 @@ private/
 Thumbs.db
 .vscode/
 .idea/
+
+# Power BI files that carry data inside them
+*.pbix
