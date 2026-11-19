@@ -49,7 +49,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Between'"
+                  "Value": "'After'"
                 }
               }
             }

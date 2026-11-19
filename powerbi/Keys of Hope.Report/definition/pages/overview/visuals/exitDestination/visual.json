@@ -5,8 +5,8 @@
     "x": 22,
     "y": 214,
     "z": 13000,
-    "height": 223,
-    "width": 325,
+    "height": 231,
+    "width": 390,
     "tabOrder": 13000
   },
   "visual": {
@@ -102,7 +102,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             }
@@ -115,7 +115,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             },
@@ -135,7 +135,7 @@
             "totals": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -148,7 +148,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "235D"
+                  "Value": "300D"
                 }
               }
             }
@@ -169,6 +169,19 @@
           },
           "selector": {
             "metadata": "Stays.Left (5 or more)"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
           }
         }
       ]

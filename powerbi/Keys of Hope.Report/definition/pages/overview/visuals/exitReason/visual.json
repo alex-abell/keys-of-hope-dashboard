@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "exitReason",
   "position": {
-    "x": 357,
+    "x": 422,
     "y": 214,
     "z": 14000,
-    "height": 223,
-    "width": 325,
+    "height": 231,
+    "width": 260,
     "tabOrder": 14000
   },
   "visual": {
@@ -102,7 +102,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             }
@@ -115,7 +115,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             },
@@ -135,7 +135,7 @@
             "totals": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -148,7 +148,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "235D"
+                  "Value": "170D"
                 }
               }
             }
@@ -169,6 +169,19 @@
           },
           "selector": {
             "metadata": "Stays.Left (5 or more)"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
           }
         }
       ]

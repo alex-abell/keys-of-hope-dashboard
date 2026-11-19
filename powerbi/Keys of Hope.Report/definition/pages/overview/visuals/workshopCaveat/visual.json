@@ -3,9 +3,9 @@
   "name": "workshopCaveat",
   "position": {
     "x": 512,
-    "y": 635,
+    "y": 641,
     "z": 19000,
-    "height": 64,
+    "height": 58,
     "width": 367,
     "tabOrder": 19000
   },
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Of the women who left, the share who moved into permanent housing, grouped by how many workshops each woman attended. This shows a pattern, not proof that workshops cause the result.",
+                    "value": "Share of women who left who moved into permanent housing, by workshops attended. A pattern, not proof that workshops cause the result.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "10px",
-                      "color": "#545454"
+                      "fontSize": "11px",
+                      "color": "#3A3A3A"
                     }
                   }
                 ],

@@ -3,9 +3,9 @@
   "name": "movement",
   "position": {
     "x": 22,
-    "y": 449,
+    "y": 479,
     "z": 16000,
-    "height": 250,
+    "height": 220,
     "width": 478,
     "tabOrder": 16000
   },

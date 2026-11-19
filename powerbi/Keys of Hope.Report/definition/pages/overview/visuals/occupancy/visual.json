@@ -5,7 +5,7 @@
     "x": 692,
     "y": 214,
     "z": 15000,
-    "height": 223,
+    "height": 253,
     "width": 566,
     "tabOrder": 15000
   },
@@ -77,8 +77,8 @@
                 }
               },
               "queryRef": "Stays.Relaunch marker",
-              "nativeQueryRef": "Relaunch",
-              "displayName": "Relaunch"
+              "nativeQueryRef": "Relaunch, March 2026",
+              "displayName": "Relaunch, March 2026"
             }
           ]
         }
@@ -124,6 +124,20 @@
                   "Value": "false"
                 }
               }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
+                }
+              }
             }
           }
         }
@@ -167,6 +181,13 @@
               "expr": {
                 "Literal": {
                   "Value": "2.3D"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'linear'"
                 }
               }
             }
