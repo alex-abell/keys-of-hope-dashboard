@@ -88,7 +88,7 @@ function build(){const need=["moves"],have=k=>!!T[k];
  V["All time"]=[new Date(first.getFullYear(),first.getMonth(),1),now];
  Object.keys(V).forEach(k=>sel.add(new Option(k,k)));sel.onchange=()=>draw(V[sel.value]);
  $("empty").hidden=true;$("dash").hidden=false;
- $("note").textContent=`${ids.size} Keys of Hope women found`+(koh?" (picked by the program column in Clients)":" (picked by room choice, because no Clients file was loaded)")+(dropped?`. ${dropped} move-in rows had no move-in date and were left out`:"")+(T.groups?"":". No Groups file loaded, so the two taking-part charts are empty")+`. Read on ${now.toLocaleDateString()}.`;
+ $("note").textContent=`${ids.size} Keys of Hope women found`+(koh?" (picked by the program column in Clients)":" (picked by room choice, because no Clients file was loaded)")+(dropped?`. ${dropped} move-in rows had no move-in date and were left out`:"")+(T.groups?"":". No Groups file loaded, so the two workshop charts are empty")+`. Read on ${now.toLocaleDateString()}.`;
  draw(V[sel.value])}
 
 // ---------- Numbers for one time period ----------
@@ -104,7 +104,7 @@ function view(lo,hi){const now=today(),ins=stays.filter(s=>s.a>=lo&&s.a<=hi),ex=
 
 // ---------- Drawing ----------
 // tbl folds any row under 5 into "All other answers" before showing it.
-function tbl(el,rows,hi,unit){const t=rows.reduce((a,r)=>a+r[1],0);if(!t){el.innerHTML="<tr><td>Nothing in this period.</td></tr>";return}
+function tbl(el,rows,hi,unit){const t=rows.reduce((a,r)=>a+r[1],0);if(!t){el.innerHTML="<tr><td>No one in this time period.</td></tr>";return}
  const big=rows.filter(r=>r[1]>=5),small=rows.filter(r=>r[1]<5),s=small.reduce((a,r)=>a+r[1],0);let out=big.slice();if(small.length)out.push([small.length>1?"All other answers":small[0][0],s]);
  el.innerHTML=`<tr><th></th><th class=n>${unit||"Women"}</th><th class=n>Share</th></tr>`+out.map(r=>`<tr class="${r[0]==hi?'hi':''}"><td>${r[0]}</td><td class=n>${sm(r[1])}</td><td class=n>${r[1]<5?"":Math.round(100*r[1]/t)+"%"}</td></tr>`).join("")+`<tr><td><b>Total</b></td><td class=n><b>${sm(t)}</b></td><td class=n><b>${t<5?"":"100%"}</b></td></tr>`}
 // RL is March 2026 as year*12+month, used to place the relaunch marker.
@@ -117,13 +117,13 @@ function line(el,ms){const W=560,H=210,l=30,b=28,t=10,mx=Math.max(80,...ms.map(m
 function flow(el,ms){const W=760,H=210,l=30,b=28,t=10,mx=Math.max(5,...ms.map(m=>Math.max(m.ins,m.ex))),bw=(W-l-8)/Math.max(ms.length,1),y=v=>t+(H-t-b)*(1-v/mx);
  const st=Math.ceil(ms.length/10);let s="";ms.forEach((m,i)=>{const x0=l+i*bw,w=Math.max(2,bw*.36);s+=`<rect x=${x0+bw*.1} y=${y(m.ins)} width=${w} height=${H-b-y(m.ins)} fill="#fa4616"/><rect x=${x0+bw*.1+w+1} y=${y(m.ex)} width=${w} height=${H-b-y(m.ex)} fill="#000"/>`;if(i%st==0)s+=`<text x=${x0+bw/2} y=${H-8} font-size=10.5 text-anchor=middle fill="#6b6b6b">${m.m}</text>`});
  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}"><text x=${l-5} y=${y(mx)+4} font-size=10.5 text-anchor=end fill="#6b6b6b">${mx}</text><text x=${l-5} y=${y(0)+4} font-size=10.5 text-anchor=end fill="#6b6b6b">0</text><line x1=${l} x2=${W-8} y1=${H-b} y2=${H-b} stroke="#000"/>${s}${mark(ms,i=>l+i*bw+bw/2,t,H-b)}</svg>`}
-function hb(el,e,key,suf,mx){const W=420,rh=44;let s="";e.forEach((r,i)=>{const v=r.n<5?null:r[key],w=v==null?0:(W-170)*v/mx;s+=`<text x=0 y=${i*rh+26} font-size=13 font-weight=600>${r.lv}</text><rect x=70 y=${i*rh+8} width=${w} height=26 fill="${r.lv=="High"?"#fa4616":r.lv=="Medium"?"#6b6b6b":"#b3b3b3"}"/><text x=${78+w} y=${i*rh+27} font-size=14 font-weight=700>${v==null?(r.n?"Fewer than 5 exits":"No exits"):v+suf}</text>`});
+function hb(el,e,key,suf,mx){const W=420,rh=44,LB={Low:"Under 2 a month",Medium:"2 to 11 a month",High:"12 or more a month"};let s="";e.forEach((r,i)=>{const v=r.n<5?null:r[key],w=v==null?0:(W-270)*v/mx;s+=`<text x=0 y=${i*rh+26} font-size=13 font-weight=600>${LB[r.lv]}</text><rect x=140 y=${i*rh+8} width=${w} height=26 fill="${r.lv=="High"?"#fa4616":r.lv=="Medium"?"#6b6b6b":"#b3b3b3"}"/><text x=${148+w} y=${i*rh+27} font-size=14 font-weight=700>${v==null?(r.n?"Fewer than 5 women":"No one yet"):v+suf}</text>`});
  el.innerHTML=`<svg viewBox="0 0 ${W} ${e.length*rh+6}">${s}</svg>`}
 function draw(r){const v=view(r[0],r[1]),nowN=stays.filter(s=>!s.b).length;
- const c=[["Left for a home of their own",v.perm==null?"n/a":v.perm+"%",v.perm==null?"fewer than 5 exits in this period":sm(v.permN)+" of "+v.ex+" exits"],["Women living here today",nowN,"right now"],["Beds filled",Math.round(100*nowN/CAP)+"%","of "+CAP+" right now"],["Move-ins",sm(v.ins),"in this period"],["Exits",sm(v.ex),"in this period"],["Average stay",v.stay==null?"n/a":v.stay,v.stay==null?"fewer than 5 exits":"days, for women who left"],["Left before two years",sm(v.early),"see where they went"]];
+ const c=[["Moved into permanent housing",v.perm==null?"Not enough data":v.perm+"%",v.perm==null?"fewer than 5 women left in this period":sm(v.permN)+" of the "+v.ex+" women who left"],["Women living here today",nowN,"of "+CAP+" beds"],["Beds filled today",Math.round(100*nowN/CAP)+"%",nowN+" of "+CAP+" beds"],["Moved in",sm(v.ins),"women, in this time period"],["Left",sm(v.ex),"women, in this time period"],["Average length of stay",v.stay==null?"Not enough data":v.stay+" days",v.stay==null?"fewer than 5 women left in this period":"for women who left in this time period"],["Left before the two-year mark",sm(v.early),"for any reason, including for housing"]];
  $("cards").innerHTML=c.map((x,i)=>`<div class="card${i==0?' lead':''}"><b>${x[0]}</b><i>${x[1]}</i><small>${x[2]}</small></div>`).join("");
  tbl($("dest"),v.dest,HOUSED);tbl($("why"),v.why,DONE);line($("occ"),v.months);flow($("flow"),v.months);hb($("eng1"),v.eng,"perm","%",100);hb($("eng2"),v.eng,"stay"," days",Math.max(...v.eng.map(e=>e.stay||0),1));
- const demo=$("demo");if(clients){demo.hidden=false;const cs=v.served.map(id=>clients[id]).filter(Boolean),tb=f=>v.tab(cs,c=>txt(c[f])||null);tbl($("d1"),tb("race_1"));tbl($("d2"),tb("countyOfOrigin"));tbl($("d3"),tb("educationLevel"));$("dn").textContent=`Women who lived at Keys of Hope at any point in this period.`}else demo.hidden=true}
+ const demo=$("demo");if(clients){demo.hidden=false;const cs=v.served.map(id=>clients[id]).filter(Boolean),tb=f=>v.tab(cs,c=>txt(c[f])||null);tbl($("d1"),tb("race_1"));tbl($("d2"),tb("countyOfOrigin"));tbl($("d3"),tb("educationLevel"));$("dn").textContent=`Counts every woman who lived at Keys of Hope at any point in this time period.`}else demo.hidden=true}
 
 // ---------- Wiring: file button, drag and drop, first paint ----------
 const pick=$("pick");pick.onchange=()=>load([...pick.files]);

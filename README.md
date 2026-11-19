@@ -16,6 +16,23 @@ Today the program's numbers live in three places and are pulled together by hand
 It is for YWCA staff first: the program director, the two counselors, and the leadership team. The same numbers can later feed grant and donor reports.
 
 
+## What it looks like
+
+Every number in these pictures is made up.
+
+**The working dashboard** (`dashboard/KeysOfHope_dashboard.html`), loaded with the sample files:
+
+![The Keys of Hope dashboard: a lead card for the share of women who moved into permanent housing, six more number cards, two tables of where women went and why they left, and charts of beds filled, move-ins and exits, and workshop attendance](docs/images/dashboard.png)
+
+**The planned Power BI report, page 2, "Who we serve"** (a mockup, not built yet):
+
+![Mockup of the Who we serve page: four number cards and six bar charts for race, county, education, income level, disability, and veteran status](docs/images/power-bi-mockup-who-we-serve.png)
+
+**The demo deck** from the hackathon presentation is in [`docs/demo/KeysOfHope_demo_deck.pptx`](docs/demo/KeysOfHope_demo_deck.pptx):
+
+![A slide reading: A safe room. A counselor. Up to two years to rebuild. Beside it, a small bedroom in window light.](docs/images/deck-program-slide.jpg)
+
+
 ## What is in this repository
 
 | Path | What it holds |
@@ -27,6 +44,8 @@ It is for YWCA staff first: the program director, the two counselors, and the le
 | `dashboard/ywca-theme.json` | YWCA colors for the planned Power BI report |
 | `data/sample/` | Made-up practice files in the same shape as the real exports. No real person appears in them. |
 | `docs/power-bi-build-steps.md` | Step-by-step plan for the Power BI version, with every query and formula |
+| `docs/demo/KeysOfHope_demo_deck.pptx` | The eleven-slide demo deck, with speaker notes. Slides are pictures, so the text is not editable. |
+| `docs/images/` | Screenshots used in this README |
 
 
 ## Quickstart
