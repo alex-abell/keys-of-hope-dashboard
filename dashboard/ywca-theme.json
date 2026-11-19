@@ -1,0 +1,15 @@
+{
+  "name": "YWCA Keys of Hope",
+  "dataColors": ["#FA4616", "#000000", "#6B6B6B", "#B3B3B3", "#FDB59E", "#3A3A3A"],
+  "background": "#FFFFFF",
+  "foreground": "#000000",
+  "tableAccent": "#FA4616",
+  "good": "#000000",
+  "neutral": "#6B6B6B",
+  "bad": "#FA4616",
+  "textClasses": {
+    "title": {"fontFace": "Segoe UI Semibold", "color": "#000000", "fontSize": 14},
+    "callout": {"fontFace": "Segoe UI Black", "color": "#000000", "fontSize": 36},
+    "label": {"fontFace": "Segoe UI", "color": "#3A3A3A", "fontSize": 10}
+  }
+}

@@ -1,0 +1,260 @@
+client_id,entry_date,exit_date,age_group,came_from,counselor,exit_type,exit_destination
+KH-0010,2024-02-11,2025-02-27,25 to 34,Jail or prison,Counselor B,Early exit,Family or friends
+KH-0059,2024-02-14,2025-02-18,25 to 34,Substance use treatment,Counselor A,Completed program,Treatment program
+KH-0060,2024-02-15,2024-12-12,25 to 34,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0027,2024-02-16,2025-01-26,55 and over,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0047,2024-02-17,2024-12-19,18 to 24,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0035,2024-02-22,2025-03-01,25 to 34,Street or car,Counselor A,Completed program,Permanent housing
+KH-0037,2024-02-24,2025-01-31,25 to 34,Halfway house,Counselor B,Early exit,Treatment program
+KH-0025,2024-03-04,2025-02-05,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0020,2024-03-15,2024-12-03,25 to 34,Jail or prison,Counselor B,Completed program,Treatment program
+KH-0023,2024-03-19,2024-12-27,35 to 44,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0046,2024-03-30,2025-01-18,25 to 34,Jail or prison,Counselor B,Completed program,Emergency shelter
+KH-0057,2024-03-30,2025-03-03,35 to 44,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0041,2024-04-05,2025-02-08,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0038,2024-04-11,2025-01-30,45 to 54,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0021,2024-04-17,2025-01-28,18 to 24,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0031,2024-04-27,2025-01-24,35 to 44,Emergency shelter,Counselor A,Completed program,Family or friends
+KH-0043,2024-04-27,2025-03-02,55 and over,Substance use treatment,Counselor A,Completed program,Family or friends
+KH-0002,2024-05-04,2025-02-19,35 to 44,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0015,2024-05-06,2025-02-23,45 to 54,Emergency shelter,Counselor B,Completed program,Family or friends
+KH-0061,2024-05-12,2025-04-10,25 to 34,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0018,2024-05-15,2025-01-08,45 to 54,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0013,2024-05-17,2025-04-24,45 to 54,Halfway house,Counselor A,Completed program,Family or friends
+KH-0024,2024-05-21,2025-01-01,55 and over,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0003,2024-05-22,2024-12-13,25 to 34,Other,Counselor A,Completed program,Permanent housing
+KH-0055,2024-05-24,2025-02-24,18 to 24,Street or car,Counselor B,Completed program,Family or friends
+KH-0058,2024-05-27,2025-03-04,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0034,2024-05-31,2025-01-30,35 to 44,Jail or prison,Counselor A,Completed program,Family or friends
+KH-0050,2024-06-08,2024-12-30,25 to 34,Substance use treatment,Counselor A,Early exit,Family or friends
+KH-0049,2024-06-12,2025-06-21,35 to 44,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0044,2024-06-14,2025-04-15,45 to 54,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0040,2024-06-29,2025-01-11,55 and over,Emergency shelter,Counselor B,Completed program,Permanent housing
+KH-0007,2024-07-03,2025-04-07,55 and over,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0051,2024-07-16,2025-05-04,25 to 34,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0004,2024-07-18,2025-05-02,45 to 54,Street or car,Counselor A,Completed program,Family or friends
+KH-0028,2024-07-20,2024-12-10,25 to 34,Emergency shelter,Counselor A,Early exit,Treatment program
+KH-0011,2024-07-21,2025-03-21,35 to 44,Street or car,Counselor A,Completed program,Family or friends
+KH-0014,2024-08-26,2025-02-20,18 to 24,Jail or prison,Counselor B,Early exit,Treatment program
+KH-0039,2024-08-30,2025-07-30,25 to 34,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0048,2024-09-01,2025-07-19,25 to 34,Street or car,Counselor B,Completed program,Permanent housing
+KH-0036,2024-09-08,2025-04-15,25 to 34,Emergency shelter,Counselor B,Completed program,Permanent housing
+KH-0022,2024-09-09,2025-03-17,25 to 34,Street or car,Counselor A,Completed program,Family or friends
+KH-0016,2024-09-10,2025-02-14,35 to 44,Substance use treatment,Counselor A,Early exit,Family or friends
+KH-0045,2024-09-12,2025-01-12,25 to 34,Emergency shelter,Counselor B,Early exit,Unknown
+KH-0006,2024-09-16,2025-02-16,45 to 54,Other,Counselor A,Completed program,Permanent housing
+KH-0017,2024-09-21,2025-01-08,25 to 34,Street or car,Counselor B,Early exit,Family or friends
+KH-0005,2024-09-23,2024-12-25,45 to 54,Substance use treatment,Counselor A,Early exit,Emergency shelter
+KH-0001,2024-10-01,2025-10-01,25 to 34,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0053,2024-10-01,2025-07-21,35 to 44,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0012,2024-10-07,2025-06-05,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0062,2024-10-08,2025-08-24,18 to 24,Jail or prison,Counselor B,Completed program,Family or friends
+KH-0008,2024-10-10,2025-02-07,18 to 24,Jail or prison,Counselor A,Early exit,Emergency shelter
+KH-0042,2024-10-12,2025-12-06,35 to 44,Halfway house,Counselor B,Completed program,Emergency shelter
+KH-0009,2024-10-21,2025-07-07,45 to 54,Jail or prison,Counselor A,Completed program,Family or friends
+KH-0033,2024-10-28,2025-07-26,35 to 44,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0029,2024-10-30,2025-06-17,45 to 54,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0054,2024-10-31,2025-01-16,55 and over,Substance use treatment,Counselor A,Early exit,Treatment program
+KH-0030,2024-11-04,2025-08-29,45 to 54,Other,Counselor B,Completed program,Permanent housing
+KH-0026,2024-11-08,2025-02-27,25 to 34,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0052,2024-11-12,2025-11-05,25 to 34,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0019,2024-11-13,2025-06-11,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0032,2024-11-17,2025-06-03,18 to 24,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0056,2024-11-19,2025-07-25,18 to 24,Substance use treatment,Counselor A,Completed program,Family or friends
+KH-0063,2024-12-02,2025-11-22,35 to 44,Street or car,Counselor B,Completed program,Treatment program
+KH-0064,2024-12-02,2025-05-22,25 to 34,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0065,2024-12-02,2025-06-27,45 to 54,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0066,2024-12-02,2025-06-12,35 to 44,Jail or prison,Counselor B,Completed program,Family or friends
+KH-0067,2024-12-07,2025-07-24,35 to 44,Halfway house,Counselor B,Completed program,Emergency shelter
+KH-0068,2024-12-08,2025-06-10,55 and over,Other,Counselor B,Completed program,Permanent housing
+KH-0069,2024-12-13,2025-08-23,45 to 54,Substance use treatment,Counselor B,Completed program,Family or friends
+KH-0070,2024-12-13,2025-08-23,25 to 34,Street or car,Counselor A,Completed program,Permanent housing
+KH-0071,2024-12-21,2025-07-16,18 to 24,Other,Counselor B,Completed program,Permanent housing
+KH-0072,2024-12-23,2025-01-06,35 to 44,Emergency shelter,Counselor B,Early exit,Family or friends
+KH-0073,2024-12-24,2025-09-05,35 to 44,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0074,2024-12-25,2025-10-19,25 to 34,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0075,2025-01-02,2025-06-08,25 to 34,Street or car,Counselor B,Completed program,Permanent housing
+KH-0076,2025-01-11,2025-09-27,25 to 34,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0077,2025-01-11,2025-08-27,25 to 34,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0078,2025-01-12,2025-11-21,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0079,2025-01-13,2025-03-10,45 to 54,Substance use treatment,Counselor B,Early exit,Jail or prison
+KH-0080,2025-01-13,2025-07-18,35 to 44,Jail or prison,Counselor B,Completed program,Family or friends
+KH-0081,2025-01-16,2025-08-21,25 to 34,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0082,2025-01-26,2025-09-10,35 to 44,Street or car,Counselor B,Completed program,Permanent housing
+KH-0083,2025-01-28,2025-09-19,45 to 54,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0084,2025-01-29,2025-10-26,45 to 54,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0085,2025-02-06,2025-11-22,35 to 44,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0086,2025-02-10,2026-01-21,35 to 44,Jail or prison,Counselor B,Completed program,Emergency shelter
+KH-0087,2025-02-11,2025-09-15,25 to 34,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0088,2025-02-16,2025-07-26,25 to 34,Other,Counselor A,Completed program,Family or friends
+KH-0089,2025-02-17,2025-09-06,25 to 34,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0090,2025-02-18,2025-07-11,55 and over,Other,Counselor A,Completed program,Permanent housing
+KH-0091,2025-02-18,2026-01-06,35 to 44,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0092,2025-02-20,2025-04-30,18 to 24,Jail or prison,Counselor A,Early exit,Family or friends
+KH-0093,2025-02-22,2026-01-08,45 to 54,Street or car,Counselor A,Completed program,Permanent housing
+KH-0094,2025-02-25,2025-05-04,45 to 54,Substance use treatment,Counselor B,Early exit,Treatment program
+KH-0095,2025-03-02,2026-02-07,18 to 24,Jail or prison,Counselor B,Completed program,Unknown
+KH-0096,2025-03-06,2026-01-20,45 to 54,Jail or prison,Counselor B,Completed program,Treatment program
+KH-0097,2025-03-06,2026-02-10,35 to 44,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0098,2025-03-10,2026-02-13,35 to 44,Substance use treatment,Counselor B,Completed program,Family or friends
+KH-0099,2025-03-14,2025-07-30,45 to 54,Street or car,Counselor B,Completed program,Permanent housing
+KH-0100,2025-03-28,2025-09-17,35 to 44,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0101,2025-03-30,2025-11-21,18 to 24,Jail or prison,Counselor A,Completed program,Emergency shelter
+KH-0102,2025-04-01,2026-02-10,25 to 34,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0103,2025-04-05,2025-09-28,35 to 44,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0104,2025-04-06,2025-06-29,35 to 44,Emergency shelter,Counselor A,Early exit,Treatment program
+KH-0105,2025-04-09,2026-03-12,25 to 34,Substance use treatment,Counselor A,Completed program,Family or friends
+KH-0106,2025-04-20,2025-12-11,45 to 54,Jail or prison,Counselor B,Completed program,Family or friends
+KH-0107,2025-04-20,2026-04-18,18 to 24,Substance use treatment,Counselor A,Completed program,Jail or prison
+KH-0108,2025-04-24,2026-02-03,25 to 34,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0109,2025-04-27,2025-11-24,25 to 34,Other,Counselor A,Completed program,Permanent housing
+KH-0110,2025-04-29,2025-12-16,35 to 44,Halfway house,Counselor A,Completed program,Unknown
+KH-0111,2025-04-30,2025-12-20,55 and over,Halfway house,Counselor B,Completed program,Unknown
+KH-0112,2025-05-01,2025-07-28,18 to 24,Substance use treatment,Counselor B,Early exit,Family or friends
+KH-0113,2025-05-01,2026-01-26,35 to 44,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0114,2025-05-05,2025-10-03,18 to 24,Street or car,Counselor B,Completed program,Permanent housing
+KH-0115,2025-05-08,2025-12-03,25 to 34,Halfway house,Counselor A,Completed program,Jail or prison
+KH-0116,2025-05-08,2025-12-10,18 to 24,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0117,2025-05-23,2025-12-26,55 and over,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0118,2025-05-25,2025-09-24,45 to 54,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0119,2025-06-03,2026-02-17,25 to 34,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0120,2025-06-04,2025-11-29,45 to 54,Street or car,Counselor A,Completed program,Permanent housing
+KH-0121,2025-06-06,2025-09-27,45 to 54,Emergency shelter,Counselor B,Early exit,Emergency shelter
+KH-0122,2025-06-07,2026-04-02,35 to 44,Jail or prison,Counselor B,Completed program,Jail or prison
+KH-0123,2025-06-13,2025-09-24,35 to 44,Jail or prison,Counselor B,Early exit,Family or friends
+KH-0124,2025-06-21,2026-02-05,25 to 34,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0125,2025-06-28,2025-12-29,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0126,2025-07-06,2025-12-24,55 and over,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0127,2025-07-08,2026-07-09,35 to 44,Emergency shelter,Counselor B,Completed program,Family or friends
+KH-0128,2025-07-08,2026-06-21,18 to 24,Substance use treatment,Counselor A,Completed program,Emergency shelter
+KH-0129,2025-07-11,2026-06-25,45 to 54,Substance use treatment,Counselor B,Completed program,Family or friends
+KH-0130,2025-07-11,2026-01-23,25 to 34,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0131,2025-07-12,2025-09-29,35 to 44,Emergency shelter,Counselor B,Early exit,Jail or prison
+KH-0132,2025-07-14,2025-09-14,18 to 24,Substance use treatment,Counselor A,Early exit,Emergency shelter
+KH-0133,2025-07-17,2026-06-08,25 to 34,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0134,2025-07-23,2026-04-04,18 to 24,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0135,2025-07-25,2026-02-17,45 to 54,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0136,2025-07-25,2026-03-28,35 to 44,Street or car,Counselor B,Completed program,Unknown
+KH-0137,2025-07-29,2026-01-27,35 to 44,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0138,2025-08-06,2026-05-26,25 to 34,Street or car,Counselor A,Completed program,Permanent housing
+KH-0139,2025-08-06,2026-06-08,18 to 24,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0140,2025-08-06,2025-12-04,45 to 54,Emergency shelter,Counselor A,Early exit,Emergency shelter
+KH-0141,2025-08-06,2026-05-25,25 to 34,Halfway house,Counselor A,Completed program,Emergency shelter
+KH-0142,2025-08-09,2026-03-13,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0143,2025-08-18,2026-03-03,35 to 44,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0144,2025-08-22,2026-04-03,45 to 54,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0145,2025-08-26,2026-03-30,25 to 34,Street or car,Counselor B,Completed program,Treatment program
+KH-0146,2025-08-28,2026-03-16,45 to 54,Jail or prison,Counselor B,Completed program,Jail or prison
+KH-0147,2025-09-03,2026-05-11,45 to 54,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0148,2025-09-06,2026-09-16,45 to 54,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0149,2025-09-10,2026-06-07,45 to 54,Jail or prison,Counselor A,Completed program,Treatment program
+KH-0150,2025-09-16,2026-03-20,25 to 34,Emergency shelter,Counselor B,Completed program,Permanent housing
+KH-0151,2025-09-16,2026-05-31,25 to 34,Other,Counselor A,Completed program,Family or friends
+KH-0152,2025-09-22,2026-07-03,55 and over,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0153,2025-09-22,2026-03-13,25 to 34,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0154,2025-09-26,2026-10-07,25 to 34,Jail or prison,Counselor B,Completed program,Family or friends
+KH-0155,2025-10-05,2026-01-28,25 to 34,Substance use treatment,Counselor A,Early exit,Family or friends
+KH-0156,2025-10-14,2025-12-31,25 to 34,Substance use treatment,Counselor A,Early exit,Jail or prison
+KH-0157,2025-10-23,2025-11-10,25 to 34,Emergency shelter,Counselor A,Early exit,Emergency shelter
+KH-0158,2025-10-31,2026-07-24,18 to 24,Emergency shelter,Counselor A,Completed program,Family or friends
+KH-0159,2025-11-07,2026-08-09,45 to 54,Halfway house,Counselor B,Completed program,Unknown
+KH-0160,2025-11-22,,35 to 44,Substance use treatment,Counselor A,,
+KH-0161,2025-11-24,2026-01-09,45 to 54,Substance use treatment,Counselor B,Early exit,Unknown
+KH-0162,2025-11-27,2026-02-23,25 to 34,Substance use treatment,Counselor B,Early exit,Unknown
+KH-0163,2025-11-27,2025-12-23,35 to 44,Emergency shelter,Counselor B,Early exit,Unknown
+KH-0164,2025-11-28,2026-09-25,18 to 24,Jail or prison,Counselor A,Completed program,Emergency shelter
+KH-0165,2025-11-29,2026-02-16,25 to 34,Jail or prison,Counselor A,Early exit,Unknown
+KH-0166,2025-11-29,2026-11-08,35 to 44,Emergency shelter,Counselor B,Completed program,Permanent housing
+KH-0167,2025-12-02,2026-08-16,35 to 44,Halfway house,Counselor B,Completed program,Unknown
+KH-0168,2025-12-15,2026-07-07,35 to 44,Halfway house,Counselor B,Completed program,Family or friends
+KH-0169,2025-12-17,2026-09-21,35 to 44,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0170,2025-12-19,2026-10-03,35 to 44,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0171,2025-12-22,2026-09-06,55 and over,Halfway house,Counselor B,Completed program,Treatment program
+KH-0172,2025-12-29,2026-10-03,45 to 54,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0173,2026-01-02,2026-08-20,18 to 24,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0174,2026-01-04,2026-08-26,18 to 24,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0175,2026-01-06,2026-10-27,18 to 24,Substance use treatment,Counselor A,Completed program,Permanent housing
+KH-0176,2026-01-06,2026-08-25,45 to 54,Emergency shelter,Counselor B,Completed program,Permanent housing
+KH-0177,2026-01-12,2026-07-05,25 to 34,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0178,2026-01-13,2026-10-20,18 to 24,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0179,2026-01-16,2026-10-15,25 to 34,Street or car,Counselor A,Completed program,Permanent housing
+KH-0180,2026-01-16,,35 to 44,Substance use treatment,Counselor A,,
+KH-0181,2026-01-18,2026-09-15,18 to 24,Jail or prison,Counselor A,Completed program,Permanent housing
+KH-0182,2026-01-18,2026-03-25,18 to 24,Jail or prison,Counselor A,Early exit,Treatment program
+KH-0183,2026-01-25,2026-05-28,18 to 24,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0184,2026-02-17,,35 to 44,Substance use treatment,Counselor A,,
+KH-0185,2026-02-17,2026-11-10,35 to 44,Street or car,Counselor A,Completed program,Treatment program
+KH-0186,2026-02-19,2026-03-20,18 to 24,Jail or prison,Counselor B,Early exit,Family or friends
+KH-0187,2026-02-20,2026-06-11,25 to 34,Substance use treatment,Counselor A,Early exit,Unknown
+KH-0188,2026-02-23,2026-08-20,35 to 44,Jail or prison,Counselor B,Completed program,Permanent housing
+KH-0189,2026-02-23,,35 to 44,Jail or prison,Counselor A,,
+KH-0190,2026-03-02,2026-10-16,18 to 24,Substance use treatment,Counselor A,Completed program,Treatment program
+KH-0191,2026-03-06,,45 to 54,Emergency shelter,Counselor A,,
+KH-0192,2026-03-07,,45 to 54,Emergency shelter,Counselor B,,
+KH-0193,2026-03-10,2026-06-08,45 to 54,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0194,2026-03-12,,25 to 34,Street or car,Counselor B,,
+KH-0195,2026-03-14,2026-04-02,55 and over,Halfway house,Counselor A,Early exit,Unknown
+KH-0196,2026-03-17,2026-09-21,18 to 24,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0197,2026-03-18,2026-08-21,35 to 44,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0198,2026-03-20,2026-05-22,25 to 34,Halfway house,Counselor B,Early exit,Unknown
+KH-0199,2026-03-22,2026-09-30,25 to 34,Street or car,Counselor A,Completed program,Permanent housing
+KH-0200,2026-03-27,2026-07-30,55 and over,Halfway house,Counselor B,Completed program,Permanent housing
+KH-0201,2026-03-30,2026-04-30,55 and over,Emergency shelter,Counselor A,Early exit,Family or friends
+KH-0202,2026-04-05,,45 to 54,Jail or prison,Counselor B,,
+KH-0203,2026-04-10,2026-10-04,25 to 34,Emergency shelter,Counselor B,Completed program,Permanent housing
+KH-0204,2026-04-21,2026-08-13,45 to 54,Substance use treatment,Counselor B,Early exit,Family or friends
+KH-0205,2026-04-22,2026-10-30,35 to 44,Street or car,Counselor A,Completed program,Permanent housing
+KH-0206,2026-04-24,2026-07-28,45 to 54,Jail or prison,Counselor A,Early exit,Emergency shelter
+KH-0207,2026-04-25,,55 and over,Jail or prison,Counselor B,,
+KH-0208,2026-05-09,2026-10-11,35 to 44,Halfway house,Counselor A,Completed program,Permanent housing
+KH-0209,2026-05-09,2026-06-21,25 to 34,Substance use treatment,Counselor B,Early exit,Family or friends
+KH-0210,2026-05-11,,25 to 34,Emergency shelter,Counselor A,,
+KH-0211,2026-05-11,2026-11-11,18 to 24,Emergency shelter,Counselor A,Completed program,Permanent housing
+KH-0212,2026-05-12,,45 to 54,Substance use treatment,Counselor A,,
+KH-0213,2026-05-17,,45 to 54,Jail or prison,Counselor B,,
+KH-0214,2026-05-18,,45 to 54,Substance use treatment,Counselor A,,
+KH-0215,2026-05-21,,25 to 34,Street or car,Counselor B,,
+KH-0216,2026-05-21,2026-08-10,25 to 34,Other,Counselor A,Early exit,Unknown
+KH-0217,2026-05-29,2026-11-01,55 and over,Other,Counselor B,Completed program,Permanent housing
+KH-0218,2026-05-29,,25 to 34,Substance use treatment,Counselor B,,
+KH-0219,2026-06-12,,25 to 34,Jail or prison,Counselor A,,
+KH-0220,2026-06-12,,35 to 44,Substance use treatment,Counselor A,,
+KH-0221,2026-06-13,,35 to 44,Other,Counselor A,,
+KH-0222,2026-06-16,2026-08-11,25 to 34,Halfway house,Counselor A,Early exit,Emergency shelter
+KH-0223,2026-06-24,,35 to 44,Substance use treatment,Counselor A,,
+KH-0224,2026-06-24,2026-07-24,35 to 44,Emergency shelter,Counselor B,Early exit,Treatment program
+KH-0225,2026-07-01,,25 to 34,Jail or prison,Counselor A,,
+KH-0226,2026-07-03,,25 to 34,Street or car,Counselor A,,
+KH-0227,2026-07-13,2026-11-19,35 to 44,Substance use treatment,Counselor B,Completed program,Permanent housing
+KH-0228,2026-07-16,,25 to 34,Jail or prison,Counselor B,,
+KH-0229,2026-07-16,,35 to 44,Street or car,Counselor B,,
+KH-0230,2026-07-19,,25 to 34,Substance use treatment,Counselor A,,
+KH-0231,2026-07-24,2026-11-17,18 to 24,Halfway house,Counselor B,Early exit,Jail or prison
+KH-0232,2026-08-02,2026-09-21,45 to 54,Substance use treatment,Counselor A,Early exit,Unknown
+KH-0233,2026-08-04,2026-11-18,25 to 34,Jail or prison,Counselor A,Early exit,Family or friends
+KH-0234,2026-08-10,2026-09-09,25 to 34,Jail or prison,Counselor A,Early exit,Family or friends
+KH-0235,2026-08-10,,18 to 24,Halfway house,Counselor B,,
+KH-0236,2026-08-17,,35 to 44,Jail or prison,Counselor B,,
+KH-0237,2026-08-20,,25 to 34,Jail or prison,Counselor B,,
+KH-0238,2026-08-22,2026-11-08,55 and over,Street or car,Counselor B,Early exit,Family or friends
+KH-0239,2026-08-30,,55 and over,Jail or prison,Counselor B,,
+KH-0240,2026-09-05,,35 to 44,Substance use treatment,Counselor A,,
+KH-0241,2026-09-20,,45 to 54,Substance use treatment,Counselor A,,
+KH-0242,2026-09-22,,25 to 34,Emergency shelter,Counselor B,,
+KH-0243,2026-09-22,,18 to 24,Jail or prison,Counselor B,,
+KH-0244,2026-09-23,,25 to 34,Substance use treatment,Counselor B,,
+KH-0245,2026-09-26,,45 to 54,Substance use treatment,Counselor B,,
+KH-0246,2026-10-01,,18 to 24,Emergency shelter,Counselor B,,
+KH-0247,2026-10-08,,35 to 44,Substance use treatment,Counselor B,,
+KH-0248,2026-10-08,,45 to 54,Emergency shelter,Counselor A,,
+KH-0249,2026-10-11,,55 and over,Halfway house,Counselor A,,
+KH-0250,2026-10-18,,25 to 34,Substance use treatment,Counselor A,,
+KH-0251,2026-10-23,,45 to 54,Jail or prison,Counselor A,,
+KH-0252,2026-11-02,,25 to 34,Emergency shelter,Counselor B,,
+KH-0253,2026-11-04,,35 to 44,Substance use treatment,Counselor A,,
+KH-0254,2026-11-06,,35 to 44,Jail or prison,Counselor A,,
+KH-0255,2026-11-09,,25 to 34,Halfway house,Counselor B,,
+KH-0256,2026-11-10,,45 to 54,Other,Counselor B,,
+KH-0257,2026-11-15,,35 to 44,Jail or prison,Counselor A,,
+KH-0258,2026-11-15,,35 to 44,Halfway house,Counselor A,,
+KH-0259,2026-11-18,,55 and over,Jail or prison,Counselor B,,
