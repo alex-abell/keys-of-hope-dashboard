@@ -24,9 +24,11 @@ Every number in these pictures is made up.
 
 ![The Keys of Hope dashboard: a lead card for the share of women who moved into permanent housing, six more number cards, two tables of where women went and why they left, and charts of beds filled, move-ins and exits, and workshop attendance](docs/images/dashboard.png)
 
-**The planned Power BI report, page 2, "Who we serve"** (a mockup, not built yet):
+**The Power BI report** (`powerbi/`), as first built on the sample files:
 
-![Mockup of the Who we serve page: four number cards and six bar charts for race, county, education, income level, disability, and veteran status](docs/images/power-bi-mockup-who-we-serve.png)
+![Power BI page titled Program overview: seven number cards led by the share who moved into permanent housing, two tables, a line chart of women living here by month, and three bar charts](docs/images/power-bi-program-overview.png)
+
+![Power BI page titled Who we serve: four number cards and six bar charts for race, county of origin, education, household income level, disability, and veteran status](docs/images/power-bi-who-we-serve.png)
 
 **The demo deck** from the hackathon presentation is in [`docs/demo/KeysOfHope_demo_deck.pptx`](docs/demo/KeysOfHope_demo_deck.pptx):
 
@@ -41,7 +43,8 @@ Every number in these pictures is made up.
 | `dashboard/src/` | The page layout (`page.html`) and the logic (`app.js`), with comments |
 | `dashboard/build.py` | Rebuilds the one-file dashboard after a change to `src/` |
 | `dashboard/vendor/` | The Excel-reading library the page uses, with its license notice |
-| `dashboard/ywca-theme.json` | YWCA colors for the planned Power BI report |
+| `powerbi/` | The two-page Power BI report as a project, with its own README on running it with the sample data |
+| `dashboard/ywca-theme.json` | YWCA colors for the Power BI report |
 | `data/sample/` | Made-up practice files in the same shape as the real exports. No real person appears in them. |
 | `docs/power-bi-build-steps.md` | Step-by-step plan for the Power BI version, with every query and formula |
 | `docs/demo/KeysOfHope_demo_deck.pptx` | The eleven-slide demo deck, with speaker notes. Slides are pictures, so the text is not editable. |
@@ -84,7 +87,7 @@ This list came from the discovery session with the program director on November 
 | What share left for a home of their own? | Built |
 | Where did the others go, and why did women leave? | Built |
 | Do women who take part more reach permanent housing faster? | Built as a first look. The cut points for low, medium, and high are placeholders. |
-| Who do we serve (race, county, education)? | Built |
+| Who do we serve (race, county, education, income, disability, veteran)? | Built |
 | Who is coming to workshops, by core area? | Not built |
 | Who is employed, and who is not yet? | Not built |
 | Who is engaged in recovery support? | Not built |
@@ -150,7 +153,8 @@ The hackathon asks every team to name owners before leaving.
 **Next**
 
 - Check the prototype's numbers against real EmpowerDB exports, done by YWCA staff on a YWCA computer.
-- Build the Power BI version from `docs/power-bi-build-steps.md`. Power BI is what the rest of YWCA reports in.
+- Open the Power BI report in `powerbi/` and confirm the hand-written layout fixes display correctly.
+- Hand the Power BI template to YWCA and run it on real exports with the program director. Power BI is what the rest of YWCA reports in.
 - Have the program director set the low, medium, and high levels for taking part.
 - Add applications and funding, which live outside EmpowerDB today.
 - Replace paper workshop sign-in sheets and paper room assignments.
