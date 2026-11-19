@@ -1,0 +1,72 @@
+table Attendance
+	isHidden
+	lineageTag: 3de45519-b0cc-4993-81e1-ecd1b41ebe1d
+
+	column activity_date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 6014463e-e060-466d-8c65-5f833591a5f4
+		summarizeBy: none
+		sourceColumn: activity_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column client_id
+		dataType: string
+		isHidden
+		lineageTag: d313b64a-fe1f-4a02-aba9-03e78068962e
+		summarizeBy: none
+		sourceColumn: client_id
+
+	column activity_type
+		dataType: string
+		lineageTag: 170cd04b-61c3-4d36-936a-500582278641
+		summarizeBy: none
+		sourceColumn: activity_type
+
+	column hours
+		dataType: double
+		lineageTag: 7d66ff9b-b66f-428d-a3ac-7b8b0d047b1a
+		summarizeBy: none
+		sourceColumn: hours
+
+	column activity_kind
+		dataType: string
+		lineageTag: e46547fa-9819-40f9-af30-36d7b2eb6c05
+		summarizeBy: none
+		sourceColumn: activity_kind
+
+	partition Attendance = m
+		mode: import
+		source =
+				let
+				    GroupMap = [#"18" = "KOH Support Group", #"21" = "Financial Literacy", #"23" = "Life Skills", #"20" = "Workforce Development", #"22" = "Physical/Mental Health", #"24" = "Housing", #"19" = "ARP Group", #"4" = "Knox English Support Group", #"5" = "Knox Immigrant/Refugee Support Group", #"6" = "Knox Hispanic Support Group", #"10" = "Anderson English Support Group", #"11" = "Anderson Hispanic Support Group", #"12" = "Anderson Immigrant/Refugee Support Group"],
+				    ServiceMap = [#"2" = "Case management", #"14" = "Housing advocacy", #"12" = "Employment counseling", #"13" = "Financial counseling", #"11" = "Education advocacy", #"8" = "Individual counseling", #"18" = "Individual therapy", #"17" = "Individual advocacy", #"28" = "Beyond Trauma curriculum", #"27" = "Relocation advocacy", #"3" = "Child or dependent care assistance"],
+				
+				    ToText = (v) => if v = null then null else Text.Trim(Text.From(v)),
+				    ToDate = (v) => try Date.From(v) otherwise null,
+				    Lookup = (map as record, v) => if v = null or v = "" then null else Record.FieldOrDefault(map, v, v),
+				    Pick = (kind as text) => Table.Combine(Table.SelectRows(ExportFiles, each [Kind] = kind)[Data]),
+				
+				    S0 = Table.SelectColumns(Pick("services"), {"Date", "Client ID", "Service Type", "Time Value 1"}, MissingField.UseNull),
+				    S1 = Table.RenameColumns(S0, {{"Client ID", "client_id"}, {"Service Type", "activity_type"}}),
+				    S2 = Table.TransformColumns(S1, {{"client_id", ToText}, {"activity_type", each Lookup(ServiceMap, ToText(_))}}),
+				    S3 = Table.AddColumn(S2, "activity_kind", each "Service"),
+				
+				    G0 = Table.SelectColumns(Pick("groups"), {"Date", "Client ID(s)", "Group Type", "Time Value 1"}, MissingField.UseNull),
+				    G1 = Table.RenameColumns(G0, {{"Client ID(s)", "client_id"}, {"Group Type", "activity_type"}}),
+				    G2 = Table.TransformColumns(G1, {{"client_id", each if _ = null then {} else List.Select(Text.SplitAny(Text.From(_), ",;| #(lf)#(cr)"), each _ <> "")}, {"activity_type", each Lookup(GroupMap, ToText(_))}}),
+				    G3 = Table.ExpandListColumn(G2, "client_id"),
+				    G4 = Table.AddColumn(G3, "activity_kind", each "Workshop"),
+				
+				    Both = Table.Combine({S3, G4}),
+				    KOHClients = List.Buffer(Clients[client_id]),
+				    KOH = Table.SelectRows(Both, each List.Contains(KOHClients, [client_id])),
+				    Renamed = Table.RenameColumns(KOH, {{"Date", "activity_date"}, {"Time Value 1", "hours"}}),
+				    Clean = Table.TransformColumns(Renamed, {{"activity_date", ToDate, type nullable date}, {"hours", each try Number.From(_) otherwise null, type nullable number}}),
+				    Typed = Table.TransformColumnTypes(Clean, {{"client_id", type text}, {"activity_type", type text}, {"activity_kind", type text}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

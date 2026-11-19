@@ -1,0 +1,21 @@
+relationship d8a3136a-4671-435f-aa70-b37518aec5c6
+	fromColumn: Stays.entry_date
+	toColumn: Date.Date
+
+relationship 79f16a48-651f-4f35-8ac1-8d6eba9874ae
+	isActive: false
+	fromColumn: Stays.exit_date
+	toColumn: Date.Date
+
+relationship 0b37776e-5f5f-4adb-8919-d3171a93a36b
+	fromColumn: Attendance.activity_date
+	toColumn: Date.Date
+
+relationship 7ee970b6-7ff1-4623-8637-1a0f05ed6cfd
+	fromColumn: Stays.client_id
+	toColumn: Clients.client_id
+
+relationship 4e9b3396-1f0a-42a4-9574-c81b96f3faaf
+	fromColumn: Attendance.client_id
+	toColumn: Clients.client_id
+

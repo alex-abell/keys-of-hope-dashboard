@@ -1,0 +1,816 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "overview",
+  "displayName": "Program overview",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F7F5F2'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "housing",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "housing",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "current",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "capacity",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "entries",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exits",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "stay",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "early",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitDestination",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "exitReason",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "occupancy",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "movement",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopHousing",
+      "target": "workshopStay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "housing",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "current",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "capacity",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "entries",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "exits",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "stay",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "early",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "exitDestination",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "exitReason",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "occupancy",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "movement",
+      "type": "NoFilter"
+    },
+    {
+      "source": "workshopStay",
+      "target": "workshopHousing",
+      "type": "NoFilter"
+    }
+  ]
+}

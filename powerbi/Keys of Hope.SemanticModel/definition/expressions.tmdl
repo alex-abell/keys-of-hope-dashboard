@@ -1,0 +1,33 @@
+expression ExportFolder = "C:\KeysOfHope\exports" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 63325d05-0075-4c70-b643-7ebfc4de0035
+
+	annotation PBI_ResultType = Text
+
+expression ExportFiles =
+		let
+		    Source = Folder.Contents(ExportFolder),
+		    Workbooks = Table.SelectRows(Source, each [Extension] <> null and Text.Lower([Extension]) = ".xlsx" and not Text.StartsWith([Name], "~$")),
+		    ReadOne = (content as binary) as table =>
+		        let
+		            Sheet = Table.SelectRows(Excel.Workbook(content, null, true), each [Kind] = "Sheet"){0}[Data],
+		            Body = Table.Skip(Sheet, each not List.AnyTrue(List.Transform(Record.FieldValues(_), (cell) => List.Contains({"Client ID", "Entry ID", "Client ID(s)"}, try Text.Trim(Text.From(cell)) otherwise null)))),
+		            Promoted = Table.PromoteHeaders(Body, [PromoteAllScalars = true])
+		        in
+		            Promoted,
+		    WithData = Table.AddColumn(Workbooks, "Data", each ReadOne([Content])),
+		    WithKind = Table.AddColumn(WithData, "Kind", each
+		        let
+		            cols = Table.ColumnNames([Data])
+		        in
+		            if List.Contains(cols, "exit_date") then "moves"
+		            else if List.Contains(cols, "Client ID(s)") then "groups"
+		            else if List.Contains(cols, "Service Type") then "services"
+		            else if List.Contains(cols, "programs") then "clients"
+		            else "other"),
+		    Result = Table.SelectColumns(WithKind, {"Name", "Kind", "Data", "Date modified"})
+		in
+		    Result
+	lineageTag: a6dd2a88-5458-45d5-a3fb-c9cd6d704e43
+
+	annotation PBI_ResultType = Table
+

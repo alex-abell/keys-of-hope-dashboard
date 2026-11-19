@@ -1,0 +1,227 @@
+table Stays
+	lineageTag: f46ab1ff-8eee-43e2-a08d-5a15d6fbdd82
+
+	measure Capacity = 70
+		formatString: #,0
+		isHidden
+		lineageTag: 2ca6f5ef-5b68-4f56-a733-cfb2112c3cec
+
+	measure 'Women Living Here Today' = CALCULATE(COUNTROWS(Stays), REMOVEFILTERS('Date'), ISBLANK(Stays[exit_date])) + 0
+		formatString: #,0
+		lineageTag: ebebbaf6-d87f-4090-b049-70654997851b
+
+	measure 'Beds Filled Today' = DIVIDE([Women Living Here Today], [Capacity])
+		formatString: 0%
+		lineageTag: 74f080a3-4b61-4db0-acdf-7feae1a7a5b4
+
+	measure 'Moved In' = COUNTROWS(Stays) + 0
+		formatString: #,0
+		lineageTag: d0301b10-89cd-4e6e-9999-29d0f1cfd1f0
+
+	measure Left = CALCULATE(COUNTROWS(Stays), USERELATIONSHIP('Date'[Date], Stays[exit_date]), NOT ISBLANK(Stays[exit_date])) + 0
+		formatString: #,0
+		lineageTag: 3391bf59-958a-43f9-9f74-651d65c0987b
+
+	measure 'Moved Into Permanent Housing' = CALCULATE([Left], Stays[exit_destination] = "Permanent housing of choice")
+		formatString: #,0
+		isHidden
+		lineageTag: 2ea8674b-0ea1-4058-bbed-78e63326e908
+
+	measure 'Percent Moved Into Permanent Housing' = IF([Left] >= 5, DIVIDE([Moved Into Permanent Housing], [Left]))
+		formatString: 0%
+		lineageTag: f71d76fb-1741-4348-99eb-59ef390d5dd7
+
+	measure 'Left Before Two-Year Mark' = CALCULATE([Left], Stays[exit_reason] <> "Completed Program Term")
+		formatString: #,0
+		lineageTag: d6e08f7b-cc5b-424d-b74a-23be634bcb8d
+
+	measure 'Average Length Of Stay Days' =
+			IF(
+			    [Left] >= 5,
+			    CALCULATE(
+			        AVERAGEX(Stays, DATEDIFF(Stays[entry_date], Stays[exit_date], DAY)),
+			        USERELATIONSHIP('Date'[Date], Stays[exit_date]),
+			        NOT ISBLANK(Stays[exit_date])
+			    )
+			)
+		formatString: #,0
+		lineageTag: 7a794374-91c1-4c9f-a3ad-d45a4f6aa8e3
+
+	measure 'Women Living Here On Date' =
+			VAR d = MAX('Date'[Date])
+			RETURN
+			    CALCULATE(
+			        CALCULATE(
+			            COUNTROWS(Stays),
+			            Stays[entry_date] <= d,
+			            ISBLANK(Stays[exit_date]) || Stays[exit_date] > d
+			        ),
+			        REMOVEFILTERS('Date')
+			    ) + 0
+		formatString: #,0
+		lineageTag: 0aef6031-f902-45c9-b901-7420ecaf8cf3
+
+	measure 'Left (5 or more)' = VAR n = [Left] RETURN IF(n >= 5, n)
+		formatString: #,0
+		lineageTag: c2338656-a159-4dac-892e-60ccac0a7c28
+
+	measure 'Women Served' =
+			VAR lo = MIN('Date'[Date])
+			VAR hi = MAX('Date'[Date])
+			RETURN
+			    CALCULATE(
+			        CALCULATE(
+			            DISTINCTCOUNT(Stays[client_id]),
+			            Stays[entry_date] <= hi,
+			            ISBLANK(Stays[exit_date]) || Stays[exit_date] >= lo
+			        ),
+			        REMOVEFILTERS('Date')
+			    ) + 0
+		formatString: #,0
+		lineageTag: dda58c5d-d583-435d-b46b-4c3f99c171b8
+
+	measure 'Women Served (5 or more)' = VAR n = [Women Served] RETURN IF(n >= 5, n)
+		formatString: #,0
+		lineageTag: dd3ba19f-6005-4f20-abd5-7508f4f5394a
+
+	measure 'Percent From Knox County' = IF([Women Served] >= 5, DIVIDE(CALCULATE([Women Served], Clients[countyOfOrigin] = "Knox County"), [Women Served]))
+		formatString: 0%
+		lineageTag: ef580694-e90e-4f45-8995-1c22065130a6
+
+	measure 'Percent Eligible For Recovery Services' = IF([Women Served] >= 5, DIVIDE(CALCULATE([Women Served], Clients[eligibleForRecovery] = "Yes"), [Women Served]))
+		formatString: 0%
+		lineageTag: 03374235-6557-4d88-aed9-3f2cf6de94d7
+
+	measure 'Percent Extremely Low Income' = IF([Women Served] >= 5, DIVIDE(CALCULATE([Women Served], Clients[incomeLimits] = "Extremely Low"), [Women Served]))
+		formatString: 0%
+		lineageTag: d165c367-0fea-424b-a7e3-f1d78651fb4d
+
+	measure 'Relaunch marker' = IF(SELECTEDVALUE('Date'[Month Start]) = DATE(2026, 3, 1), [Women Living Here On Date])
+		formatString: #,0
+		lineageTag: 498ba4f0-e468-4f2e-9fd0-c44050dd8e1b
+
+	column client_id
+		dataType: string
+		isHidden
+		lineageTag: 34de9827-f6fa-4eaa-b6e6-86b051430a40
+		summarizeBy: none
+		sourceColumn: client_id
+
+	column entry_date
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: a4d9af40-2f25-4c87-887b-83148e980632
+		summarizeBy: none
+		sourceColumn: entry_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column exit_date
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 2ed6b689-8652-4913-b2e2-f7243e7bdb5f
+		summarizeBy: none
+		sourceColumn: exit_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column exit_reason
+		dataType: string
+		lineageTag: 15e930b6-7163-4902-9aca-d6eed0e8c890
+		summarizeBy: none
+		sourceColumn: exit_reason
+
+	column exit_destination
+		dataType: string
+		lineageTag: 0283962b-6a95-43ed-aa29-11da8a7f860d
+		summarizeBy: none
+		sourceColumn: exit_destination
+
+	column permanent_housing_type
+		dataType: string
+		isHidden
+		lineageTag: 0fd42d69-2bbd-4932-b12e-158ec0df50af
+		summarizeBy: none
+		sourceColumn: permanent_housing_type
+
+	column 'Stay Days' = MAX(1, DATEDIFF(Stays[entry_date], IF(ISBLANK(Stays[exit_date]), TODAY(), Stays[exit_date]), DAY))
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 58efc4cc-b30f-4647-909b-fe682d032955
+		summarizeBy: none
+
+	column Workshops =
+			COUNTROWS(
+			    FILTER(
+			        Attendance,
+			        Attendance[client_id] = Stays[client_id]
+			            && Attendance[activity_kind] = "Workshop"
+			            && Attendance[activity_date] >= Stays[entry_date]
+			            && (ISBLANK(Stays[exit_date]) || Attendance[activity_date] <= Stays[exit_date])
+			    )
+			) + 0
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7bfa9f58-681a-4594-98c4-6050f0e359af
+		summarizeBy: none
+
+	column 'Workshops Per Month' = DIVIDE(Stays[Workshops], Stays[Stay Days] / 30)
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: e19365a1-821e-4fb1-934b-dc0e56d119a6
+		summarizeBy: none
+
+	column 'Workshop Attendance' =
+			SWITCH(TRUE(),
+			    Stays[Workshops Per Month] >= 12, "12 or more a month",
+			    Stays[Workshops Per Month] >= 2, "2 to 11 a month",
+			    "Under 2 a month"
+			)
+		dataType: string
+		lineageTag: 65f477f5-18c4-4af8-81db-9a334a60353f
+		summarizeBy: none
+		sortByColumn: 'Workshop Attendance Order'
+
+	column 'Workshop Attendance Order' = SWITCH(TRUE(), Stays[Workshops Per Month] >= 12, 3, Stays[Workshops Per Month] >= 2, 2, 1)
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 14964886-e8b7-4f57-9a5f-bcad4ba2439a
+		summarizeBy: none
+
+	partition Stays = m
+		mode: import
+		source =
+				let
+				    ReasonMap = [#"9" = "Completed Program Term", #"10" = "Client Choice to Withdraw", #"1" = "Chronic Non-payment of Rent", #"2" = "Non-compliance with Program Rules", #"3" = "Violation of the Lease Agreement", #"11" = "Left Housing/Program Without Notice", #"4" = "Other", #"77" = "Different Room within Same Shelter"],
+				    DestMap = [#"1" = "Domestic violence emergency shelter", #"2" = "Health care facility/substance abuse treatment program", #"3" = "Homeless emergency shelter", #"4" = "Hotel or motel", #"5" = "Incarceration/jail", #"6" = "Permanent housing of choice", #"7" = "Temporary housing with family or friends", #"8" = "Transitional housing", #"99" = "Unknown", #"10" = "Other"],
+				    HousingMap = [#"1" = "Rental", #"2" = "Public Housing", #"3" = "Home Ownership"],
+				
+				    ToText = (v) => if v = null then null else Text.Trim(Text.From(v)),
+				    ToDate = (v) =>
+				        let
+				            d = try Date.From(v) otherwise null
+				        in
+				            if d <> null and Date.Year(d) > 1990 then d else null,
+				    Lookup = (map as record, v) => if v = null or v = "" then null else Record.FieldOrDefault(map, v, v),
+				
+				    Raw = Table.Combine(Table.SelectRows(ExportFiles, each [Kind] = "moves")[Data]),
+				    Keep = Table.SelectColumns(Raw, {"Client ID", "date", "exit_date", "exit_reason", "exit_destination", "permanentHousingType"}, MissingField.UseNull),
+				    AsText = Table.TransformColumns(Keep, {{"Client ID", ToText}, {"exit_reason", ToText}, {"exit_destination", ToText}, {"permanentHousingType", ToText}}),
+				    KOHClients = List.Buffer(Clients[client_id]),
+				    KOH = Table.SelectRows(AsText, each List.Contains(KOHClients, [Client ID])),
+				    Named = Table.TransformColumns(KOH, {{"exit_reason", each Lookup(ReasonMap, _)}, {"exit_destination", each Lookup(DestMap, _)}, {"permanentHousingType", each Lookup(HousingMap, _)}}),
+				    Renamed = Table.RenameColumns(Named, {{"Client ID", "client_id"}, {"date", "entry_date"}, {"permanentHousingType", "permanent_housing_type"}}),
+				    Dates = Table.TransformColumns(Renamed, {{"entry_date", ToDate, type nullable date}, {"exit_date", ToDate, type nullable date}}),
+				    Real = Table.SelectRows(Dates, each [entry_date] <> null and [exit_reason] <> "Different Room within Same Shelter"),
+				    Typed = Table.TransformColumnTypes(Real, {{"client_id", type text}, {"exit_reason", type text}, {"exit_destination", type text}, {"permanent_housing_type", type text}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

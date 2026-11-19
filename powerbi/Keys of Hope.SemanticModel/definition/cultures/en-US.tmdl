@@ -1,0 +1,619 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "stays.beds_filled_today": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Beds Filled Today"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Beds filled today": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.women_living_here_today": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Women Living Here Today"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Women living here today": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.left_before_twoyear_mark": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Left Before Two-Year Mark"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Left before the two-year mark": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.moved_in": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Moved In"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Moved in": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.exit_destination": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "exit_destination"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Destination": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.left_5_or_more": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Left (5 or more)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Women": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.exit_reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "exit_reason"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reason": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.left": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Left"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Left": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.percent_moved_into_permanent_housing": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Percent Moved Into Permanent Housing"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Moved into permanent housing": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Permanent housing": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.women_living_here_on_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Women Living Here On Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Women living here": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.capacity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Capacity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "70 beds": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.relaunch_marker": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Relaunch marker"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Relaunch": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.average_length_of_stay_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Average Length Of Stay Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Average length of stay (days)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.workshop_attendance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Workshop Attendance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Workshops per month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.women_served_5_or_more": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Women Served (5 or more)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Women served": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.percent_extremely_low_income": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Percent Extremely Low Income"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Extremely low income": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.percent_from_knox_county": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Percent From Knox County"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "From Knox County": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.percent_eligible_for_recovery_services": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Percent Eligible For Recovery Services"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Eligible for recovery services": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "stays.women_served": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Stays",
+			          "ConceptualProperty": "Women Served"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Women served": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "date.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Date",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Date range": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "date.grant_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Date",
+			          "ConceptualProperty": "Grant Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Grant year": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "date.month_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Date",
+			          "ConceptualProperty": "Month Start"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "clients.countyoforigin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Clients",
+			          "ConceptualProperty": "countyOfOrigin"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "County of origin": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "clients.disabilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Clients",
+			          "ConceptualProperty": "disabilities"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Has a disability": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "clients.educationlevel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Clients",
+			          "ConceptualProperty": "educationLevel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Education": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "clients.incomelimits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Clients",
+			          "ConceptualProperty": "incomeLimits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Household income level": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "clients.race_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Clients",
+			          "ConceptualProperty": "race_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Race": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "clients.veteran": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Clients",
+			          "ConceptualProperty": "veteran"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Veteran": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

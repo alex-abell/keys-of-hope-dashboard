@@ -9,7 +9,9 @@ This builds the two-page Keys of Hope report in Power BI Desktop:
 
 Build and test on the made-up files in `data/sample/`. Never load real resident data on a volunteer machine.
 
-**Status:** nothing in this file has been run in Power BI yet. The same rules run correctly in `dashboard/KeysOfHope_dashboard.html`, so use the check table in step 9 to confirm the numbers match.
+**Status:** the report described here has been built and is in `powerbi/`. To run it, follow `powerbi/README.md`. This file is the design record: how each query and formula works and why. The built queries differ in small ways (for example, how the header row is found).
+
+**Earlier status, kept for the record:** when this was written, nothing in this file had been run in Power BI. The same rules run correctly in `dashboard/KeysOfHope_dashboard.html`, so use the check table in step 9 to confirm the numbers match.
 
 ---
 

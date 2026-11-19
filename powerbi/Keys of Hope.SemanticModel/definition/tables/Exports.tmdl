@@ -1,0 +1,41 @@
+table Exports
+	lineageTag: e5e840ae-cad2-43ac-80ab-221fce1179b8
+
+	measure 'Last Updated' =
+			VAR found = COUNTROWS(Exports) + 0
+			VAR oldest = MIN(Exports[Saved])
+			RETURN
+			    IF(
+			        found < 4,
+			        "Missing an export: found " & found & " of 4",
+			        "Last updated " & FORMAT(oldest, "m/d/yyyy")
+			    )
+		lineageTag: 35a6f083-a0fb-4524-b58f-8b28ac27a99f
+
+	column Kind
+		dataType: string
+		isHidden
+		lineageTag: 7e126d8a-501b-4c43-a7ea-4dcaa1ee1018
+		summarizeBy: none
+		sourceColumn: Kind
+
+	column Saved
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 97160d63-8ef1-4c0e-b033-62fa7d69f010
+		summarizeBy: none
+		sourceColumn: Saved
+
+	partition Exports = m
+		mode: import
+		source =
+				let
+				    Files = Table.SelectRows(ExportFiles, each [Kind] <> "other"),
+				    Grouped = Table.Group(Files, {"Kind"}, {{"Saved", each List.Max([Date modified]), type nullable datetime}}),
+				    Typed = Table.TransformColumnTypes(Grouped, {{"Kind", type text}, {"Saved", type datetime}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+
