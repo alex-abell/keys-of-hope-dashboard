@@ -8,17 +8,34 @@ Never load real resident data on a volunteer machine.
 
 Put the three sample files in a folder, for example `C:\KeysOfHope\`.
 
-In Power BI Desktop: Home > Get data > Blank query > Advanced Editor. Paste the query, change the file path at the top, click Done, and rename the query. Do this twice.
+In Power BI Desktop: Home > Get data > Blank query > Advanced Editor. Paste the query, change the file path at the top, click Done, and rename the query. Do this three times, in order.
 
 If you see a "Formula.Firewall" error: File > Options and settings > Options > Privacy (under Current File) > Ignore the Privacy Levels.
 
-### Query 1, named `Stays`
+### Query 1, named `Clients`
+
+This is the list of Keys of Hope women, picked by the program column. It also carries the demographics funders ask for. It never loads names, phone numbers, emails, or birth dates.
+
+```
+let
+    FilePath = "C:\KeysOfHope\Clients.xlsx",
+    Raw = Excel.Workbook(File.Contents(FilePath), null, true){0}[Data],
+    Headers = Table.PromoteHeaders(Table.Skip(Raw, 1), [PromoteAllScalars = true]),
+    Keep = Table.SelectColumns(Headers, {"Client ID", "programs", "gender", "race_1", "raceHispanic", "veteran", "disabilities", "countyOfOrigin", "educationLevel", "incomeLimits", "eligibleForRecovery"}),
+    KOH = Table.SelectRows(Keep, each [programs] <> null and Text.Contains(Text.From([programs]), "Keys of Hope")),
+    Renamed = Table.RenameColumns(KOH, {{"Client ID", "client_id"}}),
+    AsText = Table.TransformColumns(Renamed, {}, each if _ = null then null else Text.Trim(Text.From(_))),
+    Typed = Table.TransformColumnTypes(AsText, List.Transform(Table.ColumnNames(AsText), each {_, type text}))
+in
+    Typed
+```
+
+### Query 2, named `Stays`
 
 ```
 let
     FilePath = "C:\KeysOfHope\Move in.xlsx",
 
-    KOHRooms = {"5394", "9379", "9380", "9381", "301/310", "302/309", "303/308", "304/307"},
     ReasonMap = [#"9" = "Completed Program Term", #"10" = "Client Choice to Withdraw", #"1" = "Chronic Non-payment of Rent", #"2" = "Non-compliance with Program Rules", #"3" = "Violation of the Lease Agreement", #"11" = "Left Housing/Program Without Notice", #"4" = "Other", #"77" = "Different Room within Same Shelter"],
     DestMap = [#"1" = "Domestic violence emergency shelter", #"2" = "Health care facility/substance abuse treatment program", #"3" = "Homeless emergency shelter", #"4" = "Hotel or motel", #"5" = "Incarceration/jail", #"6" = "Permanent housing of choice", #"7" = "Temporary housing with family or friends", #"8" = "Transitional housing", #"99" = "Unknown", #"10" = "Other"],
     HousingMap = [#"1" = "Rental", #"2" = "Public Housing", #"3" = "Home Ownership"],
@@ -31,7 +48,8 @@ let
     Headers = Table.PromoteHeaders(Table.Skip(Raw, 1), [PromoteAllScalars = true]),
     Keep = Table.SelectColumns(Headers, {"Client ID", "id_slot", "date", "exit_date", "exit_reason", "exit_destination", "permanentHousingType"}),
     AsText = Table.TransformColumns(Keep, {{"Client ID", ToText}, {"id_slot", ToText}, {"exit_reason", ToText}, {"exit_destination", ToText}, {"permanentHousingType", ToText}}),
-    KOH = Table.SelectRows(AsText, each List.Contains(KOHRooms, [id_slot])),
+    KOHClients = List.Buffer(Clients[client_id]),
+    KOH = Table.SelectRows(AsText, each List.Contains(KOHClients, [Client ID])),
     Named = Table.TransformColumns(KOH, {{"exit_reason", each Lookup(ReasonMap, _)}, {"exit_destination", each Lookup(DestMap, _)}, {"permanentHousingType", each Lookup(HousingMap, _)}}),
     Renamed = Table.RenameColumns(Named, {{"Client ID", "client_id"}, {"date", "entry_date"}, {"permanentHousingType", "permanent_housing_type"}}),
     Dates = Table.TransformColumns(Renamed, {{"entry_date", ToDate, type nullable date}, {"exit_date", ToDate, type nullable date}}),
@@ -41,7 +59,7 @@ in
     Typed
 ```
 
-### Query 2, named `Services`
+### Query 3, named `Services`
 
 This joins the Services and Groups exports into one table of attendance and keeps only women who appear in `Stays`.
 
@@ -85,7 +103,7 @@ Click Close & Apply.
 
 - The first row of each export is a title, and the column names are on row 2. (Confirmed from the header files.)
 - Dropdown answers may come out as numbers (9) or as words (Completed Program Term). The queries handle both.
-- A Keys of Hope move-in is one whose room is one of the four Keys of Hope room choices in EmpowerDB.
+- A Keys of Hope woman is one whose `programs` value in the Clients export contains "Keys of Hope". (Confirmed: that column holds program names in words, with commas between several programs.) A woman who was also in another YWCA housing program will have her stays there counted too. Check this with the program director.
 - In the Groups export, "Client ID(s)" holds several IDs in one cell, separated by commas, semicolons, spaces, or line breaks.
 - "Time Value 1" is direct time in hours.
 
@@ -112,6 +130,7 @@ Date = ADDCOLUMNS(
 | `Date[Date]` | `Stays[entry_date]` | Yes |
 | `Date[Date]` | `Stays[exit_date]` | No |
 | `Date[Date]` | `Services[service_date]` | Yes |
+| `Clients[client_id]` | `Stays[client_id]` | Yes (one to many) |
 
 Do not link `Stays` to `Services`. A woman can have more than one stay.
 
@@ -226,6 +245,11 @@ The cut points of 4 and 8 are placeholders. The program director should set them
 - Bar chart: `Services[service_type]` by count of rows, split by `Services[activity_kind]`
 - Card: Women In Financial Literacy
 
+**Page 3: Who we serve**
+
+- Bar charts from `Clients`: `race_1`, `countyOfOrigin`, `educationLevel`, `incomeLimits`, `veteran`, each by count of rows
+- Fold any answer with fewer than 5 women into "Other"
+
 ## 8. Privacy checks before anyone sees real numbers
 
 - No table visual that lists one row per client.
@@ -235,6 +259,6 @@ The cut points of 4 and 8 are placeholders. The program director should set them
 ## 9. Moving to real exports (on a YWCA machine only)
 
 1. Open the `.pbit` template.
-2. In Transform data, change the three file paths to the real exports.
+2. In Transform data, change the four file paths to the real exports.
 3. The real Services export stopped at 50,000 rows in one file ("records 0 and higher"). If EmpowerDB offers a second file, it has to be added to the query, or older records will be missing.
 4. The room list in EmpowerDB does not match how rooms are assigned today (rooms are tracked on paper). The dashboard does not show rooms. It only uses the room choice to tell Keys of Hope move-ins from other programs.
