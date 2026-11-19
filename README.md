@@ -18,43 +18,60 @@ It is for YWCA staff first: the program director, the two counselors, and the le
 
 ## What is in this repository
 
-<!-- TEAM: list the real folders once they exist. Remove any row that is not true. -->
-
 | Path | What it holds |
 | --- | --- |
-| `dashboard/` | TEAM: the dashboard file (for example a Power BI `.pbix`) |
-| `data/sample/` | Made-up practice data. No real person appears in it. |
-| `data/template/` | The blank template YWCA fills with its own exports |
-| `docs/` | Process maps, the metric list, and the demo slides |
+| `dashboard/KeysOfHope_dashboard.html` | The working prototype. One file that opens in a browser and reads EmpowerDB exports on that computer. |
+| `dashboard/src/` | The page layout (`page.html`) and the logic (`app.js`), with comments |
+| `dashboard/build.py` | Rebuilds the one-file dashboard after a change to `src/` |
+| `dashboard/vendor/` | The Excel-reading library the page uses, with its license notice |
+| `dashboard/ywca-theme.json` | YWCA colors for the planned Power BI report |
+| `data/sample/` | Made-up practice files in the same shape as the real exports. No real person appears in them. |
+| `docs/power-bi-build-steps.md` | Step-by-step plan for the Power BI version, with every query and formula |
 
 
 ## Quickstart
 
-<!-- TEAM: replace these steps with the ones you actually ran. A quickstart that was never run is worse than none. -->
+**Try it with made-up data**
 
-1. TEAM: install or open (tool and version).
-2. TEAM: open `dashboard/<file>`.
-3. TEAM: point it at `data/sample/` and refresh.
-4. You should see: TEAM (one sentence describing the first screen).
+1. Download `dashboard/KeysOfHope_dashboard.html` and the four files in `data/sample/`.
+2. Open the HTML file in Chrome or Edge. No install and no internet needed.
+3. Click **Choose export files** and select all four sample files at once.
+4. You should see a black card reading "Left for a home of their own" with a percentage, six more number cards, and charts below.
 
-Tested on: TEAM (operating system, tool version, date, who ran it).
+Tested on: Chromium in an automated run on Linux, November 19, 2026, with the sample files.
+<!-- TEAM: add a line once a person has run it on Windows with real exports: browser, date, who. -->
+
+**Weekly update on a YWCA computer (real data)**
+
+1. In EmpowerDB, open EmpowerDB Administration, then Table Export.
+2. Export Clients, Move Ins & Exits, Services, and Groups to Excel. Save them in one folder.
+3. Open `KeysOfHope_dashboard.html`, click **Choose export files**, and select all four.
+
+The files are read in the browser on that computer. Nothing is uploaded. Closing the page clears the numbers.
+
+**Changing the dashboard**
+
+Edit `dashboard/src/app.js` or `dashboard/src/page.html`, then run `python3 dashboard/build.py`. The rules the numbers follow are listed in the comment at the top of `app.js`.
 
 
 ## What the dashboard shows
 
 This list came from the discovery session with the program director on November 19, 2026. Items marked "not built" are wanted but not in the prototype.
 
-<!-- TEAM: mark each row Built or Not built before the demo. -->
-
 | Question staff asked | Status |
 | --- | --- |
-| How many women live here now, out of 70? | TEAM |
-| Who is employed, and who is not yet? | TEAM |
-| Who is engaged in recovery support? | TEAM |
-| Who is coming to workshops, by core area? | TEAM |
-| Who has kept their monthly counselor meeting? | TEAM |
-| Which milestones has each woman reached? | TEAM |
-| Do women who engage more reach permanent housing faster? | TEAM |
+| How many women live here now, out of 70? | Built |
+| How many moved in and left, by month and by grant year? | Built |
+| What share left for a home of their own? | Built |
+| Where did the others go, and why did women leave? | Built |
+| Do women who take part more reach permanent housing faster? | Built as a first look. The cut points for low, medium, and high are placeholders. |
+| Who do we serve (race, county, education)? | Built |
+| Who is coming to workshops, by core area? | Not built |
+| Who is employed, and who is not yet? | Not built |
+| Who is engaged in recovery support? | Not built |
+| Who has kept their monthly counselor meeting? | Not built |
+| Which milestones has each woman reached? | Not built |
+| How many applied, and how much funding is coming in? | Not built. This is not in the EmpowerDB exports. |
 
 **Core areas:** life skills, employment, mental and physical health.
 
@@ -113,15 +130,17 @@ The hackathon asks every team to name owners before leaving.
 
 **Next**
 
-- Connect the template to a real EmpowerDB export, done by YWCA staff.
-- Add a funder page built from the same numbers.
-- Test the engagement and housing question on real records.
+- Check the prototype's numbers against real EmpowerDB exports, done by YWCA staff on a YWCA computer.
+- Build the Power BI version from `docs/power-bi-build-steps.md`. Power BI is what the rest of YWCA reports in.
+- Have the program director set the low, medium, and high levels for taking part.
+- Add applications and funding, which live outside EmpowerDB today.
+- Replace paper workshop sign-in sheets and paper room assignments.
 
 **Later**
 
-- A view for each resident.
-- Digital sign-in for workshops, to replace paper.
-- The same model for YWCA's victim services and youth services departments.
+- A view for counselors to follow one woman's progress.
+- Tabs for YWCA's other program departments.
+- A refresh that runs by itself, daily, in place of the Friday export.
 
 <!-- TEAM: add the top 3 fixes from the 2:45 test with the program director. Anything else found today goes here too. -->
 

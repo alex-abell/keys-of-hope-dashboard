@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys of Hope Dashboard</title>
+<style>
+:root{--p:#fa4616;--g1:#f4f4f4;--g2:#d9d9d9;--g3:#6b6b6b}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--g1);color:#000}
+.top{background:var(--p);padding:14px 22px;display:flex;justify-content:space-between;align-items:center}
+.top h1{margin:0;font:900 22px "Arial Black",Arial,sans-serif}.top span{font-size:13px;font-weight:600}
+.strip{background:#000;color:#fff;font-size:12.5px;padding:8px 22px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.strip label{background:#fff;color:#000;font-weight:700;padding:6px 12px;cursor:pointer;border:2px solid #fff}.strip label:focus-within{outline:3px solid var(--p)}
+.strip input{position:absolute;opacity:0;width:1px;height:1px}#files span{margin-right:14px;white-space:nowrap}#files .ok{color:#fff}#files .no{color:#bbb}
+.wrap{padding:14px 22px 90px;max-width:1500px;margin:auto}
+#empty{background:#fff;border:3px dashed #000;padding:44px;margin-top:30px;max-width:820px;font-size:16px;line-height:1.5}
+#empty h2{font:900 24px "Arial Black",Arial,sans-serif;margin:0 0 10px}#empty li{margin:6px 0}
+.cards{display:grid;grid-template-columns:1.5fr repeat(6,1fr);gap:10px}
+.card{background:#fff;border-top:4px solid #000;padding:10px 12px;min-height:96px}.card.lead{border-top:4px solid var(--p);background:#000;color:#fff}
+.card b{display:block;font-size:12.5px;line-height:1.2;font-weight:600;min-height:30px}.card i{font:900 32px "Arial Black",Arial,sans-serif;font-style:normal;display:block;margin-top:2px}
+.card.lead i{color:var(--p);font-size:44px}.card small{font-size:11.5px;color:var(--g3)}.card.lead small{color:#ccc}
+.row{display:grid;gap:10px;margin-top:10px}.r2{grid-template-columns:1.1fr 1.1fr 1.6fr}.r3{grid-template-columns:1.6fr 1fr 1fr}.r4{grid-template-columns:1fr 1fr 1fr}
+.box{background:#fff;padding:12px 14px}.box h2{margin:0 0 8px;font:900 14.5px "Arial Black",Arial,sans-serif}.note{margin:6px 0 0;font-size:11.5px;color:var(--g3)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}th{text-align:left;border-bottom:2px solid #000;padding:3px 4px;font-size:11.5px}
+td{padding:4px;border-bottom:1px solid var(--g2)}td.n,th.n{text-align:right;white-space:nowrap}tr.hi td{font-weight:700}tr.hi td:first-child{border-left:4px solid var(--p);padding-left:6px}
+svg{width:100%;height:auto;display:block}text{font-family:"Segoe UI",Arial,sans-serif}
+.leg{font-size:11.5px;margin-top:4px}.leg span{display:inline-block;width:10px;height:10px;margin:0 4px 0 10px;vertical-align:-1px}
+h3.sec{font:900 15px "Arial Black",Arial,sans-serif;margin:18px 0 0}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:3px solid #000;padding:10px 22px;display:flex;gap:18px;align-items:center;font-size:13px}
+select{font:inherit;padding:6px 10px;border:2px solid #000;background:#fff}#note{color:var(--g3);font-size:12px}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}.r2,.r3,.r4{grid-template-columns:1fr}}
+@media print{.bar,.strip label{display:none}}
+</style></head><body>
+<div class="top"><h1>Keys of Hope</h1><span>YWCA Knoxville &amp; the Tennessee Valley</span></div>
+<div class="strip"><label>Choose export files<input id="pick" type="file" multiple accept=".xlsx,.xls"></label><span id="files"></span><span style="margin-left:auto">Files are read on this computer only. Nothing is uploaded or saved.</span></div>
+<div class="wrap">
+<div id="empty"><h2>Load this week's exports</h2>
+<ol><li>In EmpowerDB, go to EmpowerDB Administration, then Table Export.</li><li>Export four tables to Excel: <b>Clients</b>, <b>Move Ins &amp; Exits</b>, <b>Services</b>, <b>Groups</b>. Save them in one folder.</li><li>Click <b>Choose export files</b> above and select all four at once. Or drag them onto this page.</li></ol>
+<p>The files never leave this computer. Close the page and the numbers are gone until you load the files again.</p></div>
+<div id="dash" hidden>
+<div class="cards" id="cards"></div>
+<div class="row r2">
+ <div class="box"><h2>Where women went when they left</h2><table id="dest"></table></div>
+ <div class="box"><h2>Why women left</h2><table id="why"></table><p class="note">"Completed Program Term" means she stayed the full two years. Leaving sooner is not bad news if she left for a home.</p></div>
+ <div class="box"><h2>Beds filled, month by month</h2><div id="occ"></div><p class="note">Dashed line is 70 beds. Orange marker is the program relaunch in March 2026.</p></div>
+</div>
+<div class="row r3">
+ <div class="box"><h2>Move-ins and exits each month</h2><div id="flow"></div><div class="leg"><span style="background:#fa4616"></span>Move-ins<span style="background:#000"></span>Exits</div></div>
+ <div class="box"><h2>Does taking part help? Share who left for a home of their own</h2><div id="eng1"></div><p class="note">By workshops attended per month of stay. Low: under 2. Medium: 2 to 11. High: 12 or more. These cut points are placeholders for the program director to set.</p></div>
+ <div class="box"><h2>Average stay in days, by how much women took part</h2><div id="eng2"></div></div>
+</div>
+<div id="demo" hidden><h3 class="sec">Who we serve</h3>
+<div class="row r4"><div class="box"><h2>Race</h2><table id="d1"></table></div><div class="box"><h2>County of origin</h2><table id="d2"></table></div><div class="box"><h2>Education</h2><table id="d3"></table></div></div><p class="note" id="dn"></p></div>
+<p id="note" style="margin-top:14px"></p>
+</div></div>
+<div class="bar"><label for="v"><b>Show:</b></label><select id="v"></select><span style="color:#6b6b6b">Any group of fewer than 5 women is hidden or folded into "All other answers".</span></div>
+<script>/*XLSX*/</script>
+<script>/*APP*/</script>
+</body></html>
