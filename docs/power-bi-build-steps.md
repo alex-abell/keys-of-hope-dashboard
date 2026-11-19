@@ -1,6 +1,6 @@
 # Power BI build steps
 
-Build on the made-up data in `data/sample/`. Never load real resident data on a volunteer machine.
+Build on the made-up data in `data/sample/`. The categories (exit reasons, exit destinations, rooms, group and service names) match the choices in YWCA's EmpowerDB entry form. The column names are placeholders until we see real export headers. Never load real resident data on a volunteer machine.
 
 ## 1. Load the data
 
@@ -69,7 +69,7 @@ Exits = CALCULATE(
 ```
 
 ```
-Exits To Permanent Housing = CALCULATE([Exits], Stays[exit_destination] = "Permanent housing")
+Exits To Permanent Housing = CALCULATE([Exits], Stays[exit_destination] = "Permanent housing of choice")
 ```
 
 ```
@@ -77,7 +77,7 @@ Percent To Permanent Housing = DIVIDE([Exits To Permanent Housing], [Exits])
 ```
 
 ```
-Early Exits = CALCULATE([Exits], Stays[exit_type] = "Early exit")
+Early Exits = CALCULATE([Exits], Stays[exit_reason] <> "Completed Program Term")
 ```
 
 ```
@@ -87,6 +87,15 @@ Average Stay Days = CALCULATE(
     NOT ISBLANK(Stays[exit_date])
 )
 ```
+
+```
+Percent In Financial Literacy = DIVIDE(
+    CALCULATE(DISTINCTCOUNT(Services[client_id]), Services[service_type] = "Financial Literacy"),
+    DISTINCTCOUNT(Stays[client_id])
+)
+```
+
+Counting every exit reason other than "Completed Program Term" as an early exit is a placeholder. The program director should confirm it.
 
 ## 6. Columns for the engagement page
 
@@ -122,16 +131,24 @@ The cut points of 4 and 8 are placeholders. The program director should set them
 - Line chart: `Date[Month]` by Residents On Date, with a constant line at 70
 - Column chart: `Date[Month]` by Entries and Exits
 - Bar chart: `Stays[exit_destination]` by Exits
+- Bar chart: `Stays[exit_reason]` by Exits
 - Slicers: `Date[Year]`, `Stays[counselor]`
 
 **Page 2: Does engagement help?**
 
 - Bar chart: `Stays[Engagement]` by Percent To Permanent Housing
 - Bar chart: `Stays[Engagement]` by Average Stay Days
-- Bar chart: `Services[service_type]` by count of rows
+- Bar chart: `Services[service_type]` by count of rows, split by `Services[activity_kind]`
+- Card: Percent In Financial Literacy
 
 ## 8. Privacy checks before anyone sees real numbers
 
 - No table visual that lists one row per client.
 - Any group with 1 to 4 women is shown as "Fewer than 5" or folded into "Other".
 - Save a copy as a template (File > Export > Power BI template, a `.pbit` file). The template holds no data, so it is the safe file to move to a YWCA machine.
+
+## 9. Before using real exports
+
+- EmpowerDB has an exit reason called "Different Room within Same Shelter". That is a room change, not an exit. Filter those rows out of exit counts and join them into one stay.
+- Filter every table to the Keys of Hope program.
+- Remove name, birth date, address, phone, and email columns before loading.
