@@ -24,7 +24,7 @@ expression ExportFiles =
 		            else if List.Contains(cols, "Service Type") then "services"
 		            else if List.Contains(cols, "programs") then "clients"
 		            else "other"),
-		    Result = Table.SelectColumns(WithKind, {"Name", "Kind", "Data"})
+		    Result = Table.SelectColumns(WithKind, {"Name", "Kind", "Data", "Date modified"})
 		in
 		    Result
 	lineageTag: a6dd2a88-5458-45d5-a3fb-c9cd6d704e43

@@ -4,7 +4,7 @@ A two-page Power BI report: **Program overview** and **Who we serve**. It reads 
 
 This folder holds the report as a Power BI project, which is plain text that can be reviewed and versioned. It holds no data. You load the made-up sample files yourself, in about five minutes.
 
-> **Status, November 19, 2026.** The report was built and checked in Power BI Desktop on the sample files. A second set of layout fixes was then written by hand into the report files and has **not** been opened in Power BI yet. If the report will not open, see "If it will not open" at the end.
+> **Status, November 19, 2026.** The report was built and checked in Power BI Desktop on the sample files, and the Relaunch line was added there. Two sets of changes were then written by hand into the project files and have **not** been opened in Power BI yet: layout fixes, and the "Last updated" line. If the project will not open, see "If it will not open" at the end.
 
 
 ## What you need
@@ -41,6 +41,8 @@ On **Program overview**, with the date filter starting January 1, 2026, you shou
 
 On **Who we serve**, "Women served" should read 159.
 
+Beside each page title, a small line should read **Last updated** with a date. That date is when the oldest of the four export files was saved, so it tells you how fresh the data is, not when Refresh was clicked. If one of the four exports is missing from the folder, the line says so.
+
 These match `dashboard/KeysOfHope_dashboard.html` on the same files.
 
 
@@ -73,7 +75,9 @@ Real exports stay on a YWCA computer. Do not load them on a volunteer machine.
 
 **Every week after that:** export the four tables into the same folder, replacing last week's, open the `.pbix`, and click Refresh.
 
-Before the first real use, remove the "Synthetic demo data" label from both pages, and have the program director check the numbers against what she knows. The report has only ever been run on the sample files.
+Before the first real use, have the program director check the numbers against what she knows. The report has only ever been run on the sample files.
+
+**Check the "Last updated" line after each Refresh.** If it shows last week's date, one of the four files was not replaced.
 
 
 ## What is in this folder
@@ -90,5 +94,6 @@ The rules behind the numbers, and how each query and formula was designed, are i
 ## If it will not open
 
 - **Power BI says the project format is not supported.** Update Power BI Desktop. If it still fails, look under File > Options and settings > Options > Preview features for the project (`.pbip`) and report format options, turn them on, and restart.
-- **A visual shows an error after the hand-written fixes.** The first commit of this folder is the version that was checked in Power BI. Restore `Keys of Hope.Report/` from that commit and the report will open as first built.
+- **The project fails to load, or names a table called `Exports`.** The hand-written "Last updated" change is the likely cause. It is the last commit that touched `Keys of Hope.SemanticModel/`. Revert that commit.
+- **A visual shows an error after the hand-written layout fixes.** The first commit of this folder is the version that was checked in Power BI. Restore `Keys of Hope.Report/` from that commit and the report will open as first built.
 - **Refresh fails with a folder error.** `ExportFolder` does not point at a folder that exists. Fix it under Edit parameters.

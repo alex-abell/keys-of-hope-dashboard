@@ -11,12 +11,13 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["ExportFolder","ExportFiles","Clients","Stays","Attendance","Date"]
+annotation PBI_QueryOrder = ["ExportFolder","ExportFiles","Clients","Stays","Attendance","Date","Exports"]
 
 ref table Clients
 ref table Stays
 ref table Attendance
 ref table Date
+ref table Exports
 
 ref cultureInfo en-US
 
