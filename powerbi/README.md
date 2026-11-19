@@ -4,7 +4,7 @@ A two-page Power BI report: **Program overview** and **Who we serve**. It reads 
 
 This folder holds the report as a Power BI project, which is plain text that can be reviewed and versioned. It holds no data. You load the made-up sample files yourself, in about five minutes.
 
-> **Status, November 19, 2026.** The report was built and checked in Power BI Desktop on the sample files, and the Relaunch line was added there. Two sets of changes were then written by hand into the project files and have **not** been opened in Power BI yet: layout fixes, and the "Last updated" line. If the project will not open, see "If it will not open" at the end.
+> **Status, November 19, 2026.** Opened and refreshed in Power BI Desktop on the sample files, including the layout fixes and the "Last updated" line. It has not been run on real exports yet.
 
 
 ## What you need
@@ -80,6 +80,11 @@ Before the first real use, have the program director check the numbers against w
 **Check the "Last updated" line after each Refresh.** If it shows last week's date, one of the four files was not replaced.
 
 
+## Handing it to YWCA
+
+`docs/handoff-guide.md` is the two-page guide written for the program director: first-time setup, the Friday routine, sharing, and what to do if something goes wrong. Send it with the `.pbit` template and an empty `exports` folder, zipped as one folder named `KeysOfHope`, so that unzipping to `C:\` gives `C:\KeysOfHope\exports`.
+
+
 ## What is in this folder
 
 | Path | What it holds |
@@ -94,6 +99,4 @@ The rules behind the numbers, and how each query and formula was designed, are i
 ## If it will not open
 
 - **Power BI says the project format is not supported.** Update Power BI Desktop. If it still fails, look under File > Options and settings > Options > Preview features for the project (`.pbip`) and report format options, turn them on, and restart.
-- **The project fails to load, or names a table called `Exports`.** The hand-written "Last updated" change is the likely cause. It is the last commit that touched `Keys of Hope.SemanticModel/`. Revert that commit.
-- **A visual shows an error after the hand-written layout fixes.** The first commit of this folder is the version that was checked in Power BI. Restore `Keys of Hope.Report/` from that commit and the report will open as first built.
 - **Refresh fails with a folder error.** `ExportFolder` does not point at a folder that exists. Fix it under Edit parameters.

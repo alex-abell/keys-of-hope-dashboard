@@ -153,7 +153,6 @@ The hackathon asks every team to name owners before leaving.
 **Next**
 
 - Check the prototype's numbers against real EmpowerDB exports, done by YWCA staff on a YWCA computer.
-- Open the Power BI report in `powerbi/` and confirm the hand-written layout fixes display correctly.
 - Hand the Power BI template to YWCA and run it on real exports with the program director. Power BI is what the rest of YWCA reports in.
 - Have the program director set the low, medium, and high levels for taking part.
 - Add applications and funding, which live outside EmpowerDB today.
