@@ -1,0 +1,33 @@
+# Real data never belongs in this repository.
+# Only made-up files under data/sample/ and the blank template under data/template/ are allowed.
+
+# Spreadsheets and exports anywhere else
+*.xlsx
+*.xls
+*.csv
+*.tsv
+!data/sample/**
+!data/template/**
+
+# Report exports and screenshots that may show real records
+*.pdf
+exports/
+real/
+private/
+
+# Power BI working files that can cache data
+*.pbit.bak
+*.pbix.tmp
+.pbi/
+
+# Secrets and local settings
+.env
+.env.*
+*.pem
+*.key
+
+# Operating system and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
