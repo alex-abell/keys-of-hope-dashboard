@@ -82,7 +82,11 @@ Before the first real use, have the program director check the numbers against w
 
 ## Handing it to YWCA
 
-`docs/handoff-guide.md` is the two-page guide written for the program director: first-time setup, the Friday routine, sharing, and what to do if something goes wrong. Send it with the `.pbit` template and an empty `exports` folder, zipped as one folder named `KeysOfHope`, so that unzipping to `C:\` gives `C:\KeysOfHope\exports`.
+The package to send is ready: [`handoff/KeysOfHope_for_YWCA.zip`](../handoff/KeysOfHope_for_YWCA.zip). It is one folder named `KeysOfHope` that holds the `.pbit` template (no data), the two-page guide as a PDF, and an empty `exports` folder, so that unzipping to `C:\` gives `C:\KeysOfHope\exports`.
+
+`docs/handoff-guide.md` is the same guide as plain text: first-time setup, the Friday routine, sharing, and what to do if something goes wrong.
+
+One thing to know about the Friday routine: the report reads every Excel file in the `exports` folder. If last week's files are left beside this week's, moves and attendance are counted twice. The guide tells the reader to empty the folder first. A change to the queries that guards against this is a good next fix.
 
 
 ## What is in this folder

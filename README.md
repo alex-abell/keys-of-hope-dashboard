@@ -4,6 +4,14 @@ A staff dashboard for Keys of Hope, the residential program run by YWCA Knoxvill
 
 > **Status: hackathon prototype, November 19, 2026.** It runs on made-up data. It has not been connected to any YWCA system. See [What this is not](#what-this-is-not).
 
+**Start here**
+
+| If you want to | Go to |
+| --- | --- |
+| Read the story of the day | https://abellminded.com/work/ywca/keys-of-hope |
+| Run the report at YWCA | [`handoff/`](handoff): one zip with the template, a two-page guide, and the exports folder |
+| Make something that looks like YWCA | https://github.com/alex-abell/ywca-knoxville-design-kit |
+
 <!-- TEAM: every line marked TEAM below is a fact only the team or YWCA can fill in. Do not guess. Delete this comment when none are left. -->
 
 
@@ -47,6 +55,7 @@ Every number in these pictures is made up.
 | `dashboard/ywca-theme.json` | YWCA colors for the Power BI report |
 | `data/sample/` | Made-up practice files in the same shape as the real exports. No real person appears in them. |
 | `docs/power-bi-build-steps.md` | Step-by-step plan for the Power BI version, with every query and formula |
+| `handoff/KeysOfHope_for_YWCA.zip` | The package for YWCA: the Power BI template (no data), a two-page guide, and an empty exports folder |
 | `docs/demo/KeysOfHope_demo_deck.pptx` | The eleven-slide demo deck, with speaker notes. Slides are pictures, so the text is not editable. |
 | `docs/images/` | Screenshots used in this README |
 
@@ -169,18 +178,17 @@ The hackathon asks every team to name owners before leaving.
 
 ## Team
 
-Built by a volunteer team with YWCA Knoxville's Director of Social Services as the problem owner.
+Thank you to the five people who did this, by name.
 
-| Role | Did what |
-| --- | --- |
-| Problem owner (YWCA) | Made the decisions and tested the prototype |
-| Design lead | Ran discovery and wireframed the dashboard |
-| Developer | Set up the repository and the data template |
-| Team coach | Kept scope and time, built the dashboard |
+| Who | Role | Did what |
+| --- | --- | --- |
+| Amy Shelton | YWCA Director of Social Services | Brought the problem and the hope, and made every decision |
+| Bryan Terrill | Design lead | Ran discovery at the whiteboard |
+| Julianna Cutter | Developer | Built the application screening automation |
+| Robert Ormand | Team member | Joined the team on the day |
+| Alex Abell | Team coach | Built the dashboard and the Power BI report, with Claude and Codex as AI tools |
 
-No one is named here on purpose. Ask before adding anyone.
-
-Hack for Nonprofits 2026 is run by 121 Tech Hub and United Way of Greater Knoxville.
+Hack for Nonprofits 2026 was held at 121 Tech Hub in partnership with United Way of Greater Knoxville.
 
 
 ## License
