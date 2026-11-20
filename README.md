@@ -184,7 +184,7 @@ Thank you to the five people who did this, by name.
 | --- | --- | --- |
 | Amy Shelton | YWCA Director of Social Services | Brought the problem and the hope, and made every decision |
 | Bryan Terrill | Design lead | Ran discovery at the whiteboard |
-| Julianna Cutter | Developer | Built the application screening automation |
+| Julianna Cutter | Developer | Updated the JotForm flow that handles a program qualification step, which used to take many phone calls |
 | Robert Ormand | Team member | Joined the team on the day |
 | Alex Abell | Team coach | Built the dashboard and the Power BI report, with Claude and Codex as AI tools |
 
