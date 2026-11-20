@@ -35,6 +35,6 @@ The first run on real records is the next step. When you do it, check every numb
 
 ## The same guide, as a web page
 
-Steps with pictures: https://abellminded.com/clients/ywca/keys-of-hope#use
+Steps with pictures: https://abellminded.com/work/ywca/keys-of-hope#use
 
 The guide as plain text: [`docs/handoff-guide.md`](../docs/handoff-guide.md)

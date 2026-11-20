@@ -8,7 +8,7 @@ A staff dashboard for Keys of Hope, the residential program run by YWCA Knoxvill
 
 | If you want to | Go to |
 | --- | --- |
-| Read the story of the day | https://abellminded.com/clients/ywca/keys-of-hope |
+| Read the story of the day | https://abellminded.com/work/ywca/keys-of-hope |
 | Run the report at YWCA | [`handoff/`](handoff): one zip with the template, a two-page guide, and the exports folder |
 | Make something that looks like YWCA | https://github.com/alex-abell/ywca-knoxville-design-kit |
 
@@ -182,7 +182,7 @@ Thank you to the five people who did this, by name.
 
 | Who | Role | Did what |
 | --- | --- | --- |
-| Amy Shelton | YWCA Director of Social Services | Brought the problem, the paper, and every decision |
+| Amy Shelton | YWCA Director of Social Services | Brought the problem and the hope, and made every decision |
 | Bryan Terrill | Design lead | Ran discovery at the whiteboard |
 | Julianna Cutter | Developer | Built the application screening automation |
 | Robert Ormand | Team member | Joined the team on the day |
