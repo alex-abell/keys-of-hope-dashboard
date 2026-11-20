@@ -2,6 +2,8 @@
 
 A guide for the person at YWCA who keeps the report up to date. One folder, four export files, one Refresh button.
 
+The folder itself is in [`handoff/KeysOfHope_for_YWCA.zip`](../handoff/KeysOfHope_for_YWCA.zip). It holds the report template, this guide as a two-page PDF, and an empty exports folder.
+
 ## First time only
 
 About 10 minutes. You need a Windows computer.
@@ -17,12 +19,13 @@ About 10 minutes. You need a Windows computer.
 
 About 5 minutes.
 
-1. **Export the same four tables** from EmpowerDB.
-2. **Save them into the exports folder,** replacing last week's files.
-3. **Open "Keys of Hope"** and click Refresh on the Home tab.
-4. **Check the "Last updated" date** beside the page title. It should be today.
+1. **Empty the exports folder.** Delete last week's files, so nothing is counted twice.
+2. **Export the same four tables** from EmpowerDB.
+3. **Save them into the exports folder.**
+4. **Open "Keys of Hope"** and click Refresh on the Home tab.
+5. **Check the "Last updated" date** beside the page title. It should be today.
 
-If "Last updated" shows an old date, one of the four files was not replaced. If it says an export is missing, one of the four is not in the folder.
+If "Last updated" shows an old date, one of the four tables was not exported this week. If it says an export is missing, one of the four is not in the folder.
 
 ## Sharing the report with your team
 
@@ -49,11 +52,13 @@ The four exports hold client records for every YWCA program, not just Keys of Ho
 
 - **Program overview:** who lives here now, who moved in and left, and where women went.
 - **Who we serve:** race, county, education, income, disability, and veteran status of the women served.
-- **The filters at the top right** change the time period on both pages. A grant year runs July to June.
+- **The filters at the top right** change the time period. A grant year runs July to June.
 - **Success** counts every woman who moved into permanent housing, whenever she left.
 
 ## If something goes wrong
 
 - **Refresh shows an error about a folder.** The exports folder was moved or renamed. Put it back at `C:\KeysOfHope\exports`.
 - **You could not unzip to C:.** Unzip anywhere. In step 5, type the full location of your exports folder.
+- **Services saves as two files.** That happens when the table is large. Put both in the exports folder.
+- **The numbers look doubled.** Last week's files are still in the exports folder. Delete them and click Refresh.
 - **A number looks wrong.** Do not use it yet. The report was built on made-up data and should be checked against what you know the first time it runs on real records.
