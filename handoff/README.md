@@ -13,9 +13,9 @@
 - **`exports`**
   An empty folder. Your four EmpowerDB export files go here.
 
-## The weekly routine, in one line
+## The weekly routine, in short
 
-Every Friday: delete last week's files from `exports`, export four tables from EmpowerDB, save them into `exports`, open `Keys of Hope`, click `Refresh` on the `Home` tab, and check that the `Last updated` date is today.
+Every Friday: delete last week's files from `exports`. Export four tables from EmpowerDB and save them there. Open your saved `Keys of Hope` file (not the template), click `Refresh` on the `Home` tab, and check that `Last updated` shows today's date.
 
 It takes about 5 minutes.
 
